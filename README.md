@@ -12,5 +12,6 @@ Nguyễn Phú Lâm
 Phan Trần Thảo Duy
 **Lớp học phần**:
 CT275_02
-**Tên dự án**:
+**Tên dự án**: 
+Xây dựng web cho thuê trang phục
 
