@@ -86,7 +86,7 @@
                 <div class="row">
                     <div class="col-md-4">
                      <p><b> Địa chỉ:</b> Khu vực 7, An Bình, Ninh Kiều Cần Thơ</p>  
-                     <p><b> Điện thoại:</b> 0938 107 918</p>  
+                     <p><b> Điện thoại:</b> 0938 107 918 - 0704 887 7367</p>  
                      <p><b> Email:</b> shoplamduy@gmail.com</p>  
                     </div>
                     <div class="col-md-4 ps-5">
@@ -94,7 +94,10 @@
 
                     </div>
                     <div class="col-md-4">
-                        <div><img src="/images/" alt="" width="50%"></div>
+                       <div class="row">
+                         <div class="col-md-6"><img src="/images/web_check.png" alt="" width="50%"></div>
+                        <div  class="col-md-6"><img src="/images/long_logo.png" alt="" width= "70%"></div>
+                       </div>
                         <div><a href="/Home"><i class="fab fa-facebook-f" style="color: #ffa6a6;"></i></a> <i class="fab fa-twitter"
                                 style="color: #ffa6a7;"><a href="/Home"></a></i> <i class="fab fa-instagram" style="color: #ffa6a7;"><a href="/Home"></a></i>
                             <i class="fab fa-youtube" style="color: #ffa6a7;"><a href="/Home"></a></i>

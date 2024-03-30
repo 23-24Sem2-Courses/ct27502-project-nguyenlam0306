@@ -64,6 +64,23 @@ footer .top-footer i {
 
 footer .bot-footer {
     color: white;
-    background-color: #a56f93;
+    background-color: #ff8aa4;
     /* height: 30px; */
+}
+
+
+/*Hình ảnh trang Home*/
+
+.rounded-5:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+    /* Đổ bóng */
+}
+
+
+/*carousel*/
+
+.carousel-item:hover {
+    transform: scale(1.02) !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
 }

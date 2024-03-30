@@ -29,41 +29,35 @@
 <div class="container">
     <div class="row justify-content-around my-5">
         <div class="col-md-5 justify-content-center d-flex">
-            <img src=" /images/Home/bannertrangchu.jpg" alt="" width="100%">
+            <img src="/img/intro-home/silk.jpg" alt="" width="100%" class="rounded-5">
         </div>
-        <div class="col-md-5 d-flex justify-content-center align-items-center">
+        <div class="col-md-7 d-flex justify-content-center align-items-center">
             <div>
-                <h4>TỪ NHỮNG MẦM TRÀ, CHÚNG TÔI TẠO RA NIỀM ĐAM MÊ</h4>
-                <p style="text-align: justify">Trải qua hơn 50 năm chắt chiu tinh hoa từ những búp trà xanh và
-                    hạt cà phê thượng hạng
-                    cùng
-                    mong muốn mang lại cho khách hàng những trải nghiệm giá trị nhất khi thưởng thức, Phúc
-                    Long liên tục là thương hiệu tiên phong với nhiều ý tưởng sáng tạo đi đầu trong ngành
-                    trà
-                    và cà phê.
-
-                    Chúng tôi tin rằng từng sản phẩm trà và cà phê sẽ càng thêm hảo hạng khi được tạo ra
-                    từ
-                    sự phấn đấu không ngừng cùng niềm đam mê. Và chính kết nối dựa trên niềm tin, sự trung thực
-                    và
-                    tin yêu sẽ góp phần mang đến những nét đẹp trong văn hóa thưởng trà và cà phê ngày càng bay cao,
-                    vươn xa.</p>
+                <h4>QUAN TRỌNG CỦA VIỆC CHỌN VẢI TỐT TRONG QUÁ TRÌNH MAY ĐỒ</h4>
+                <p style="text-align: justify">Trong quá trình chọn vải cho việc may đồ, việc lựa chọn loại vải phù hợp là quan trọng. Tùy thuộc vào mục đích sử dụng và phong cách thiết kế, việc chọn vải tốt đòi hỏi sự tỉ mỉ và am hiểu về các loại vải khác nhau để đảm bảo sự thoải mái, đẹp mắt và độ bền của sản phẩm cuối cùng.</p>
             </div>
         </div>
     </div>
-    <div class="row justify-content-around my-5">
-        <div class="col-md-5 d-flex justify-content-center align-items-center">
+    <div class="row justify-content-around my-7">
+        <div class="col-md-7 d-flex justify-content-center align-items-center">
             <div>
-                <h4>ĐỘI NGŨ NHÂN VIÊN TRÀN ĐẦY NHIỆT HUYẾT</h4>
-                <p style="text-align: justify">Trong suốt quá trình hoạt động và phát triển, đội ngũ quản lý
-                    và nhân viên của Phúc Long Coffee & Tea, qua bao thế hệ, đã cùng nhau xây dựng, nuôi dưỡng
-                    niềm đam mê dành cho trà và cà phê với mong muốn được thử thách bản thân trong ngành
-                    dịch vụ năng động và sáng tạo.
+                <h4>BÍ QUYẾT CHO QUẦN ÁO LUÔN SẠCH SẼ VÀ VÀO NẾP</h4>
+                <p style="text-align: justify">Quy trình giặt ủi chuyên nghiệp không chỉ đảm bảo sạch sẽ mà còn bảo vệ chất lượng và màu sắc của quần áo. Từ việc phân loại, sử dụng sản phẩm chăm sóc đúng cách đến kỹ thuật ủi tinh tế, mỗi bước đều được thực hiện với tinh thần cẩn trọng và kỹ lưỡng, tạo nên sự hoàn hảo và sự tự tin khi mặc.
                 </p>
             </div>
         </div>
         <div class="col-md-5 justify-content-center d-flex">
-            <img src=" /images/Home/tuyendung1.jpg" alt="" width="70%">
+            <img src=" /img/intro-home/iron.jpg" alt="" width="100%" class="rounded-5">
+        </div>
+    </div>
+    <div class="row justify-content-around mt-7 pb-2">
+        <div class="col-md-5 justify-content-center d-flex ">
+            <img src="/img/intro-home/save.jpg" alt="" width="100%" class="rounded-5">
+        </div>
+        <div class="col-md-7 d-flex justify-content-center align-items-center">
+            <div>
+                <h4>LỢI ÍCH CỦA THUÊ TRANG PHỤC NHÀ DYLA</h4>
+                <p style="text-align: justify">Việc thuê trang phục có sẵn mang lại lợi ích về tiết kiệm chi phí, đa dạng lựa chọn phong cách, thuận tiện trong việc chuẩn bị cho các sự kiện và giảm bớt áp lực về việc bảo quản trang phục sau sự kiện. Đồng thời, nó còn giúp tạo ra sự mới mẻ trong phong cách mỗi khi cần và góp phần giảm lượng rác thải từ việc mua sắm trang phục mới.</div>
         </div>
     </div>
 </div>
