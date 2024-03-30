@@ -18,6 +18,7 @@ class Router
             }
             unset($arr[0]);
         }
+        // Tao doi tuong moi -> man hinh moi 
         $this->controller = new ('App\\Controllers\\' . $this->controller);
         // Actions
         if (isset($arr[1])) {
@@ -26,7 +27,7 @@ class Router
             }
             unset($arr[1]);
         }
-        $this->params= $arr ? array_values($arr) : [];
+        $this->params = $arr ? array_values($arr) : [];
     }
     public function UrlProcess()
     {
@@ -35,17 +36,21 @@ class Router
         }
     }
 
-    public function getController() {
+    public function getController()
+    {
         return $this->controller;
     }
 
-    public function getAction() {
+    public function getAction()
+    {
         return $this->action;
     }
 
-    public function getParams() {
+    public function getParams()
+    {
         return $this->params;
     }
+   
 
     public static function redirect($url)
     {

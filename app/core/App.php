@@ -1,7 +1,12 @@
 <?php
+namespace App\Core;
 class App {
     function __construct() {
-        echo "Hello, user";
+        $router = new Router();
+        $controller = $router->getController();
+        $action=$router->getAction();
+        $params=$router->getParams();
+        call_user_func_array([$controller,$action],$params);
     }
 }
 ?>

@@ -1,5 +1,6 @@
-
 <?php
 session_start();
-require_once "../app/views/auth/login.php"
-?>
+define('BASE_URL','/');
+require '../vendor/autoload.php';
+require  "../app/bootstrap.php";
+$myApp = new App\Core\App();
