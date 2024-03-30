@@ -19,7 +19,7 @@
 <body>
     <div id="header"></div>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top navigation">
             <div class="container">
                 <a class="navbar-brand" href="/Home"><img src="/images/long_logo.png" alt="Logo" width="150px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -72,28 +72,32 @@
         <a href="#header" id="return-to-top" class="btn"><i class="fas fa-chevron-up" style="color: #0e4c2f;"></i></a>
     </header>
     <main>
+       
         <?php if (file_exists('../app/views/page/' . $data['page'] . '_page.php')) {
 
             include '../app/views/page/' . $data['page'] . '_page.php';
         }
         ?>
+    
     </main>
     <footer class="mt-3">
         <div class="top-footer">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        
+                     <p><b> Địa chỉ:</b> Khu vực 7, An Bình, Ninh Kiều Cần Thơ</p>  
+                     <p><b> Điện thoại:</b> 0938 107 918</p>  
+                     <p><b> Email:</b> shoplamduy@gmail.com</p>  
                     </div>
                     <div class="col-md-4 ps-5">
-                     
+                    <div> <a href="/Home"><b>Chính sách của chúng tôi</b></a></div>
 
                     </div>
                     <div class="col-md-4">
                         <div><img src="/images/" alt="" width="50%"></div>
-                        <div><i class="fab fa-facebook-f" style="color: #ffa6a6;"></i> <i class="fab fa-twitter"
-                                style="color: #ffffff;"></i> <i class="fab fa-instagram" style="color: #ffffff;"></i>
-                            <i class="fab fa-youtube" style="color: #ffffff;"></i>
+                        <div><a href="/Home"><i class="fab fa-facebook-f" style="color: #ffa6a6;"></i></a> <i class="fab fa-twitter"
+                                style="color: #ffa6a7;"><a href="/Home"></a></i> <i class="fab fa-instagram" style="color: #ffa6a7;"><a href="/Home"></a></i>
+                            <i class="fab fa-youtube" style="color: #ffa6a7;"><a href="/Home"></a></i>
                         </div>
                     </div>
                 </div>
