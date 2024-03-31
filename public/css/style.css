@@ -1,7 +1,11 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+html {
+    padding-top: 60px;
 }
 
 
@@ -39,6 +43,10 @@
 
 .nav-item a:hover::after {
     width: 100%;
+}
+
+main {
+    min-height: 400px;
 }
 
 
@@ -83,4 +91,36 @@ footer .bot-footer {
 .carousel-item:hover {
     transform: scale(1.02) !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+
+/* form */
+
+.form-message {
+    text-align: left;
+}
+
+.form-group .form-message {
+    color: #ffa5a5;
+}
+
+.form-message {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin-left: 10%;
+    margin-top: 0%;
+    padding: 4px 0 0;
+}
+
+#top {
+    position: absolute;
+    top: 0px;
+}
+
+#return-to-top {
+    z-index: 100;
+    bottom: 30px;
+    right: 10px;
+    border: 1px solid #ffffffff;
+    position: fixed;
 }
