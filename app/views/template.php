@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/images/small_logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/small_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -21,7 +21,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top navigation">
             <div class="container">
-                <a class="navbar-brand" href="/Home"><img src="/images/long_logo.png" alt="Logo" width="150px"></a>
+                <a class="navbar-brand" href="/Home"><img src="/img/long_logo.png" alt="Logo" width="150px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -88,8 +88,8 @@
                     </div>
                     <div class="col-md-4">
                         <div class="row">
-                            <div class="col-md-6"><img src="/images/web_check.png" alt="" width="50%"></div>
-                            <div class="col-md-6"><img src="/images/long_logo.png" alt="" width="70%"></div>
+                            <div class="col-md-6"><img src="/img/web_check.png" alt="" width="50%"></div>
+                            <div class="col-md-6"><img src="/img/long_logo.png" alt="" width="70%"></div>
                         </div>
                         <div><a href="/Home"><i class="fab fa-facebook-f" style="color: #ffa6a6;"></i></a> <a href="/Home"><i class="fab fa-instagram" style="color: #ffa6a7;"></i></a>
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 30, 2024 lúc 02:46 PM
+-- Thời gian đã tạo: Th4 01, 2024 lúc 05:11 AM
 -- Phiên bản máy phục vụ: 8.0.35
 -- Phiên bản PHP: 8.2.12
 
@@ -34,6 +34,14 @@ CREATE TABLE `orders` (
   `address` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `orders`
+--
+
+INSERT INTO `orders` (`order_id`, `customer_id`, `status`, `address`) VALUES
+(1, 1, 0, '123 Main St, Cityville'),
+(2, 2, 0, '456 Elm St, Townsville');
+
 -- --------------------------------------------------------
 
 --
@@ -46,6 +54,15 @@ CREATE TABLE `order_items` (
   `product_id` int NOT NULL,
   `quantity` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `order_items`
+--
+
+INSERT INTO `order_items` (`id`, `order_id`, `product_id`, `quantity`) VALUES
+(1, 1, 1, 2),
+(2, 1, 2, 1),
+(3, 2, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -64,6 +81,15 @@ CREATE TABLE `products` (
   `image_path` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `type`, `color`, `size`, `description`, `price`, `image_path`) VALUES
+(1, 'T-shirt', 'Clothing', 'Blue', 'M', 'Comfortable cotton T-shirt', 19.990, 'images/tshirt_blue.jpg'),
+(2, 'Jeans', 'Clothing', 'Black', 'L', 'Stylish black jeans', 29.990, 'images/jeans_black.jpg'),
+(3, 'Sneakers', 'Shoes', 'White', '42', 'Casual white sneakers', 39.990, 'images/sneakers_white.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -74,12 +100,20 @@ CREATE TABLE `users` (
   `id` int NOT NULL,
   `username` varchar(255) NOT NULL,
   `fullname` varchar(255) NOT NULL,
-  `phone` varchar(15) NOT NULL,
-  `password_hash` varchar(255) NOT NULL,
+  `phonenumber` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `notes` text,
-  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `added_on` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_on` timestamp NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `fullname`, `phonenumber`, `password`, `notes`, `added_on`, `updated_on`) VALUES
+(1, 'john_doe', 'John Doe', '123456789', 'password_hash_123', 'Some notes about John Doe', '2024-03-30 07:46:00', '2024-03-30 07:46:00'),
+(2, 'jane_smith', 'Jane Smith', '987654321', 'password_hash_456', 'Some notes about Jane Smith', '2024-03-30 07:46:00', '2024-03-30 07:46:00');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -120,25 +154,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `order_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
@@ -161,24 +195,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
--- Dữ liệu mẫu cho bảng `users`
-INSERT INTO `users` (`id`, `username`, `fullname`, `phone`, `password_hash`, `notes`, `created_at`, `updated_at`) VALUES
-(1, 'john_doe', 'John Doe', '123456789', 'password_hash_123', 'Some notes about John Doe', '2024-03-30 14:46:00', '2024-03-30 14:46:00'),
-(2, 'jane_smith', 'Jane Smith', '987654321', 'password_hash_456', 'Some notes about Jane Smith', '2024-03-30 14:46:00', '2024-03-30 14:46:00');
-
--- Dữ liệu mẫu cho bảng `products`
-INSERT INTO `products` (`id`, `name`, `type`, `color`, `size`, `description`, `price`, `image_path`) VALUES
-(1, 'T-shirt', 'Clothing', 'Blue', 'M', 'Comfortable cotton T-shirt', 19.99, 'images/tshirt_blue.jpg'),
-(2, 'Jeans', 'Clothing', 'Black', 'L', 'Stylish black jeans', 29.99, 'images/jeans_black.jpg'),
-(3, 'Sneakers', 'Shoes', 'White', '42', 'Casual white sneakers', 39.99, 'images/sneakers_white.jpg');
-
--- Dữ liệu mẫu cho bảng `orders`
-INSERT INTO `orders` (`order_id`, `customer_id`, `status`, `address`) VALUES
-(1, 1, 0, '123 Main St, Cityville'),
-(2, 2, 0, '456 Elm St, Townsville');
-
--- Dữ liệu mẫu cho bảng `order_items`
-INSERT INTO `order_items` (`id`, `order_id`, `product_id`, `quantity`) VALUES
-(1, 1, 1, 2),
-(2, 1, 2, 1),
-(3, 2, 3, 1);

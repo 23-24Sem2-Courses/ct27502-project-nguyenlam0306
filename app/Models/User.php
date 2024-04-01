@@ -9,11 +9,12 @@ class User
 {
     private $pdo;
     private $errors = [];
-    private $id = -1;
+    private $id = -2;
     private $username;
     private $fullname;
     private $phonenumber;
     private $password;
+    private $hashing_pass;
     private $notes;
     private $added_on;
     private $updated_on;
@@ -59,7 +60,7 @@ class User
             'id' => $this->id,
             'username' => $this->username,
             'fullname' => $this->fullname,
-            'password' => $this->password,
+            'hashing_password' => $this->hashing_pass,
             'phonenumber' => $this->phonenumber,
             'notes' => $this->notes,
             'added_on' => $this->added_on,
@@ -86,28 +87,28 @@ class User
         $result = false;
         $this->hashingPassword();
         if ($this->id >= 0) {
-            $statement = $this->pdo->prepare('UPDATE users SET username = :username, fullname = :fullname, phonenumber =:phonenumber, password = :password, added_on = now() WHERE id=:id');
+            $statement = $this->pdo->prepare('UPDATE users SET username = :username, fullname = :fullname, phonenumber =:phonenumber, hashing_pass = :hashing_pass, added_on = now() WHERE id=:id');
             $statement->execute([
                 'username' => $this->username,
                 'fullname' => $this->fullname,
                 'phonenumber' => $this->phonenumber,
-                'password' => $this->password,
+                'hashing_pass' => $this->hashing_pass,
                 'id' => $this->id
             ]);
         } else {
-            $statement = $this->pdo->prepare('INSERT INTO users(username, fullname, phone, password_hash, added_on, updated_on) VALUES (:username, :fullname, :phonenumber, :password, now(), now())');
+            $statement = $this->pdo->prepare('INSERT INTO users(username, fullname, phone, hashing_password, added_on, updated_on) VALUES (:username, :fullname, :phonenumber, :hashing_pass, now(), now())');
             $statement->execute([
                 'username' => $this->username,
                 'fullname' => $this->fullname,
                 'phonenumber' => $this->phonenumber,
-                'password' => $this->password
+                'hashing_pass' => $this->hashing_pass
             ]);
             $this->id = $this->pdo->lastInsertId();
         }
     }
     public function hashingPassword()
     {
-        $this->password = password_hash($this->password, PASSWORD_DEFAULT);
+        $this->hashing_pass = password_hash($this->password, PASSWORD_DEFAULT);
         return $this;
     }
 

@@ -42,7 +42,7 @@ class Login extends \App\Core\Controller
                     $_SESSION['user_id'] = $user->getID();
                     $_SESSION['user_fullname'] = $user->getFullName();
                     if ($value['username'] === 'admin') {
-                        echo '<script>alert("Đã vào admin thành công");setTimeout(function(){window.location.href="/admin/";}, 980);</script>';
+                        echo '<script>alert("Đã vào admin thành công");setTimeout(function(){window.location.href="/Admin/";}, 980);</script>';
                     } else {
                         echo '<script>alert("Đăng nhập thành công");setTimeout(function(){window.location.href="/Home";}, 980);</script>';
                     }
