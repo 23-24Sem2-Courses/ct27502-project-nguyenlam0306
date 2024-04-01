@@ -2,10 +2,15 @@
 
 namespace App\Controllers;
 
-class Home extends \App\Core\Controller
+class Logout extends \App\Core\Controller
 {
    function Show()
    {
-      $this->view('template', ['page' => 'Home']);
+      if (isset($_SESSION['islogin'])) {
+         unset($_SESSION['user_id']);
+         unset($_SESSION['user_fulname']);
+         unset($_SESSION['islogin']);
+         \App\Core\Router::redirect('/Home');
+     }
    }
 }

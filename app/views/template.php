@@ -21,7 +21,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top navigation">
             <div class="container">
-                <a class="navbar-brand" href="/Home"><img src="/img/long_logo.png" alt="Logo" width="150px"></a>
+                <a class="navbar-brand" href="/Home"><img src="/img/logo/long_logo.png" alt="Logo" width="150px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -89,7 +89,7 @@
                     <div class="col-md-4">
                         <div class="row">
                             <div class="col-md-6"><img src="/img/web_check.png" alt="" width="50%"></div>
-                            <div class="col-md-6"><img src="/img/long_logo.png" alt="" width="70%"></div>
+                            <div class="col-md-6"><img src="/img/logo/long_logo.png" alt="" width="70%"></div>
                         </div>
                         <div><a href="/Home"><i class="fab fa-facebook-f" style="color: #ffa6a6;"></i></a> <a href="/Home"><i class="fab fa-instagram" style="color: #ffa6a7;"></i></a>
 
