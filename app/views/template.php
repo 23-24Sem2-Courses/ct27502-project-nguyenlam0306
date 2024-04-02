@@ -61,8 +61,7 @@
                     </div>
                 </div>
             </div>
-        </nav>
-        <a href="#top" id="return-to-top" class="btn"><i class="fas fa-chevron-up" style="color: black;"></i></a>
+        </nav>      
     </header>
     <main>
 
