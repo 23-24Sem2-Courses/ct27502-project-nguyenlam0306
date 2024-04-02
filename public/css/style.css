@@ -120,11 +120,3 @@ footer .bot-footer {
     position: absolute;
     top: 0px;
 }
-
-#return-to-top {
-    z-index: 100;
-    bottom: 30px;
-    right: 10px;
-    border: 1px solid #ffffffff;
-    position: fixed;
-}
