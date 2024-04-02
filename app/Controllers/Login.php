@@ -21,7 +21,7 @@ class Login extends \App\Core\Controller
             ]);
             // chỗ này -> yeu cầu đn thì đưa data Login
         } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $validator = new \App\Core\Validators([
+            $validator = new \App\Core\Validator([
                 'username' => 'isRequired',
                 'password' => 'isRequired'
             ]);

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Core\Validators;
+use App\Core\Validator;
 
 class Register extends \App\Core\Controller
 {
@@ -23,7 +23,7 @@ class Register extends \App\Core\Controller
             'page' => 'Register'
          ]);
       } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
-         $validator = new Validators([
+         $validator = new Validator([
             'username' => 'isRequired | unique: User, username',
             'fullname' => 'isRequired',
             'phone' => 'isRequired | isPhone | unique: User, phone',
