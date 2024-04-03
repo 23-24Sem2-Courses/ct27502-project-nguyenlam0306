@@ -27,7 +27,7 @@
   }
 
   .side-image {
-    background-image: url("/img/login/login.png");
+    background-image: url("/img/login/login.svg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -81,39 +81,28 @@
     border: none !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
     outline: none !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 10px !important;
     color: darkslategray !important;
   }
 
   .input-box .input-field label {
     position: absolute;
-    top: 10px;
+    top: -20px;
     left: 10px;
     pointer-events: none;
     transition: .5s;
   }
 
-  .input-field .input:focus~label {
-    top: -10px;
-    font-size: 13px;
-  }
-
-  .input-field .input:valid~label {
-    top: -10px;
-    font-size: 13px;
-    color: darkgray;
-  }
-
   .input-field .input:focus,
   .input-field .input:valid {
-    border-bottom: 1px solid darkgray;
+    border-bottom: 1px solid gray;
   }
 
   .submit {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 330px;
     border: none;
     outline: none;
     height: 45px;
@@ -156,19 +145,21 @@
       top: 70%;
       text-align: center;
     }
+
     .form-warning {
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1rem;
-    color: red;
-}
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1rem;
+      color: red;
+    }
   }
 </style>
 <div class="wrapper">
   <div class="container main">
     <div class="row l-row center">
       <!-- hinh anh -->
+     
       <div class="col-md-6 side-image">
         <img src="/img/logo/small_logo.png" alt="" class="logo">
         <div class="texts">
@@ -177,23 +168,21 @@
           </p>
         </div>
       </div>
-
       <div class="col-md-6 right">
         <form action="/Login" method="POST" class="input-box">
           <h1>Đăng nhập</h1>
           <div class="mb-3 input-field">
-         
-            <input type="text" class="input" id="" aria-describedby="" required name="username" id="username">
             <label for="username">Tên đăng nhập</label>
+            <input type="text" class="input" id="" aria-describedby="" required name="username" id="username">
             <span class="form-warning">
               <?= isset($data['errors']['username']) ? $data['errors']['username'] : '' ?>
             </span>
           </div>
 
           <div class="mb-3 input-field">
-          
-            <input type="password" class="input" id="password" name="password" required>
             <label for="password">Mật khẩu</label>
+            <input type="password" class="input" id="password" name="password" required>
+
             <span class="form-warning">
               <?= isset($data['errors']['password']) ? $data['errors']['password'] : '' ?>
             </span>
@@ -201,13 +190,13 @@
           <div class="mb-3 input-field">
             <span>Bạn chưa có tài khoản? <a href="/Register">Đăng ký ngay</a></span>
           </div>
-          <button type="submit" class="submit">Đăng nhập</button>         
+          <button type="submit" class="submit">Đăng nhập</button>
           <span>
             <?= (isset($data['authenticate']) && $data['authenticate'] === false) ? '<p class="form-warning">Tên đăng nhập hoặc mật khẩu không chính xác</p>' : '' ?>
           </span>
       </div>
       </form>
-
+     
     </div>
   </div>
 </div>
