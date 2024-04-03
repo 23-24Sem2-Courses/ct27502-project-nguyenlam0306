@@ -156,6 +156,13 @@
       top: 70%;
       text-align: center;
     }
+    .form-warning {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1rem;
+    color: red;
+}
   }
 </style>
 <div class="wrapper">
@@ -175,28 +182,33 @@
         <form action="/Login" method="POST" class="input-box">
           <h1>Đăng nhập</h1>
           <div class="mb-3 input-field">
+         
             <input type="text" class="input" id="" aria-describedby="" required name="username" id="username">
             <label for="username">Tên đăng nhập</label>
             <span class="form-warning">
-              <?= (isset($data['errors']['username'])) ? $data['errors']['username'] : '' ?>
+              <?= isset($data['errors']['username']) ? $data['errors']['username'] : '' ?>
             </span>
           </div>
 
           <div class="mb-3 input-field">
-
+          
             <input type="password" class="input" id="password" name="password" required>
             <label for="password">Mật khẩu</label>
             <span class="form-warning">
-              <?= (isset($data['errors']['password'])) ? $data['errors']['password'] : '' ?>
+              <?= isset($data['errors']['password']) ? $data['errors']['password'] : '' ?>
             </span>
           </div>
           <div class="mb-3 input-field">
             <span>Bạn chưa có tài khoản? <a href="/Register">Đăng ký ngay</a></span>
           </div>
-          <button type="submit" class="submit">Submit</button>
-        </form>
-
+          <button type="submit" class="submit">Đăng nhập</button>         
+          <span>
+            <?= (isset($data['authenticate']) && $data['authenticate'] === false) ? '<p class="form-warning">Tên đăng nhập hoặc mật khẩu không chính xác</p>' : '' ?>
+          </span>
       </div>
+      </form>
+
     </div>
   </div>
+</div>
 </div>

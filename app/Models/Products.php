@@ -141,15 +141,26 @@ class Products
         $product->fillFromDB($stmt->fetch(PDO::FETCH_ASSOC));
         return $product;
     }
-    public function addProduct($name, $type, $price,$size,$color, $image_path,$description)
+    public function addProduct($name, $type, $price, $size, $color, $image_path,$description)
     {
-        $stmt = $this->pdo->prepare("INSERT INTO {$this->tableName} (name,type, price,size,color, image_path, description) VALUES (:name, :type, :price, size, color ,:image_path, :description)");
+        $stmt = $this->pdo->prepare("INSERT INTO {$this->tableName} (name,type, price, size,color, image_path, description) VALUES (:name, :type, :price, :size, :color ,:image_path, :description)");
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':type', $type);
         $stmt->bindParam(':price', $price);
+        $stmt->bindParam(':size', $size);
+        $stmt->bindParam(':color', $color);
         $stmt->bindParam(':image_path', $image_path);
         $stmt->bindParam(':description', $description);
         return $stmt->execute();
+    }
+
+    public function updateProduct($id, $name, $type,$size,$color, $description, $price, $image_path)
+    {
+        $sql = "UPDATE products SET name=?, type=? ,size=?, color=?, description=?, price=?, image_path=? WHERE id=?";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$name, $type,$size, $color, $description, $price, $image_path, $id]);
+        header("location" . "/Admin/Manage/Product");
+        
     }
 
 }
