@@ -1,9 +1,20 @@
 <style>
-  .wrapper {
-    background: #ececec;
+    .wrapper {
     padding: 0 20px 0 20px;
-  }
+    position: relative;
+   
+}
 
+.background-image {
+    background-image: url("/img/login/login.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
   .main {
     display: flex;
     justify-content: center;
@@ -156,6 +167,7 @@
   }
 </style>
 <div class="wrapper">
+  <div class="background-image"></div>
   <div class="container main">
     <div class="row l-row center">
       <!-- hinh anh -->
