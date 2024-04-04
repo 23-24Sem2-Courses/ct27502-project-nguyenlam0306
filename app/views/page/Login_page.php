@@ -87,7 +87,7 @@
 
   .input-box .input-field label {
     position: absolute;
-    top: -20px;
+    top: -23px;
     left: 10px;
     pointer-events: none;
     transition: .5s;
@@ -149,14 +149,14 @@
     .form-warning {
       text-align: center;
       font-size: 1rem;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 1rem;
       color: red;
     }
   }
 </style>
 <div class="wrapper">
-  <div class="container main">
+  <div class="container main pt-2">
     <div class="row l-row center">
       <!-- hinh anh -->
      
@@ -192,7 +192,7 @@
           </div>
           <button type="submit" class="submit">Đăng nhập</button>
           <span>
-            <?= (isset($data['authenticate']) && $data['authenticate'] === false) ? '<p class="form-warning">Tên đăng nhập hoặc mật khẩu không chính xác</p>' : '' ?>
+            <?= (isset($data['authenticate']) && $data['authenticate'] === false) ? '<span class="form-warning">Tên đăng nhập hoặc mật khẩu không chính xác</span>' : '' ?>
           </span>
       </div>
       </form>

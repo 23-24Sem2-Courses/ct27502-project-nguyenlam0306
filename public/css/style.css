@@ -46,7 +46,7 @@ html {
 }
 
 main {
-    min-height: 400px;
+    min-height: 600px;
 }
 
 
@@ -119,4 +119,11 @@ footer .bot-footer {
 #top {
     position: absolute;
     top: 0px;
+}
+
+.form-warning {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1rem;
+    color: red;
 }

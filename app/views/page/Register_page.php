@@ -87,10 +87,11 @@
 
   .input-box .input-field label {
     position: absolute;
-    top: -20px;
+    top: -24px;
     left: 10px;
     pointer-events: none;
     transition: .5s;
+    
   }
 
   .input-field .input:focus,
@@ -145,15 +146,9 @@
       top: 70%;
       text-align: center;
     }
-
-    .form-warning {
-      text-align: center;
-      font-size: 1rem;
-      font-weight: 500;
-      line-height: 1rem;
-      color: red;
-    }
+   
   }
+  
 </style>
 <div class="wrapper">
   <div class="container main">
@@ -163,7 +158,7 @@
 
       <div class="col-md-6 right">
         <form action="/Register" method="POST" class="input-box">
-          <h1>Đăng Kí</h1>
+          <h1>Đăng ký</h1>
           <div class="mb-3 input-field">
             <label for="username">Tên đăng nhập</label>
             <input type="text" class="input" id="username" name="username" value="" required />
@@ -202,9 +197,9 @@
           <div class="mb-3 input-field">
             <span>Bạn đã có tài khoản? <a href="/Login">Đăng nhập ngay</a></span>
           </div>
-          <button type="submit" class="submit">Đăng nhập</button>
+          <button type="submit" class="submit">Đăng ký</button>
           <span>
-            <?= (isset($data['authenticate']) && $data['authenticate'] === false) ? '<p class="form-warning">Tên đăng nhập hoặc mật khẩu không chính xác</p>' : '' ?>
+            <?= (isset($data['authenticate']) && $data['authenticate'] === false) ? '<p id="warning">Tên đăng nhập hoặc mật khẩu không chính xác</p>' : '' ?>
           </span>
       </div>
       </form>

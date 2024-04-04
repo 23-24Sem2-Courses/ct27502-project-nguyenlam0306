@@ -31,7 +31,7 @@
                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-2">
                             <li class="nav-item">
                                 <a class="nav-link <?= $data['page'] == 'Home' ? 'active' : '' ?>" aria-current="page" href="/Home">Trang chủ</a>
                             </li>
@@ -39,7 +39,7 @@
                                 <a class="nav-link <?= $data['page'] == 'Intro' ? 'active' : '' ?>" href="/Intro">Về chúng tôi</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link <?= $data['page'] == 'Products' ? 'active' : '' ?>" href="/Products">Sản phẩm</a>
+                                <a class="nav-link <?= $data['page'] == 'Products' ? 'active' : '' ?>" href="/Products">Thuê đồ</a>
                             </li>
 
                             <li class="nav-item">
