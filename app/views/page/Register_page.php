@@ -1,8 +1,23 @@
 <style>
   .wrapper {
-    background: #ececec;
     padding: 0 20px 0 20px;
-  }
+    position: relative;
+    /* Độ mờ của background image */
+   
+}
+
+.background-image {
+    background-image: url("/img/Register/Register.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+
 
   .main {
     display: flex;
@@ -58,6 +73,7 @@
   form {
     width: 330px;
     box-sizing: border-box;
+    z-index: 100;
   }
 
   h1 {
@@ -113,7 +129,7 @@
   }
 
   .submit:hover {
-    background: #ff8aa4;
+    background: #88AD8D;
     color: #ffffff;
   }
 
@@ -151,6 +167,7 @@
   
 </style>
 <div class="wrapper">
+  <div class="background-image"></div>
   <div class="container main">
     <div class="row l-row center">
       <!-- hinh anh -->
