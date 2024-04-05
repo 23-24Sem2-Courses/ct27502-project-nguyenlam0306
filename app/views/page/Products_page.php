@@ -24,7 +24,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <img src="" alt="" class="img-fluid" id="imgProductModal">
+        <img src="" alt="" class="img-fluid d-md-block rounded mb-2 shadow" id="imgProductModal">
         <div>
           <div id="idProductModal" class="d-none"></div>
           <div class="description">

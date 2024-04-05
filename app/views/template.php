@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/small_logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- Thư viện  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" media="all" href="<?= '/css/style.css' ?>">
     <title>
         Trang <?= $data['page'] ?>
@@ -17,7 +18,7 @@
 </head>
 
 <body>
-<div id="top"></div>
+    <div id="top"></div>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top navigation">
             <div class="container">
@@ -46,8 +47,9 @@
                                 <a class="nav-link <?= $data['page'] == 'Contact' ? 'active' : '' ?>" href="/Contact">Liên hệ</a>
                             </li>
                         </ul>
-                        <div>
-
+                        <div class="">
+                            <a href="/Cart" class="btn mt-0 p-0 position-relative"><i style="color: #ffa6a6; font-size: 30px" class="fa-brands fa-opencart"></i>
+                            </a>
                             <?php
                             if (isset($_SESSION['islogin'])) {
                                 include '../app/views/partitions/islogin.php';
@@ -55,13 +57,12 @@
                                 include '../app/views/partitions/islogout.php';
                             }
                             ?>
-                            <a href="/Cart" class="btn mt-0 p-0 position-relative"><i style="color: #ffa6a6; font-size: 30px" class="fas fa-shopping-cart"></i>
-                            </a>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </nav>      
+        </nav>
     </header>
     <main>
 

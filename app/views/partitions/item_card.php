@@ -31,7 +31,7 @@
 </style>
 <div id="<?= $product['id'] ?? '' ?>" class="card m-2 pb-2" style="width:16rem; height:20.5rem">
     <div class="d-flex justify-content-center mt-1">
-        <img src="<?= $product['image_path'] ?? '' ?>" id="img<?= $product['id'] ?? '' ?>" alt="" class="img-fluid">
+        <img src="<?= $product['image_path'] ?? '' ?>" id="img<?= $product['id'] ?? '' ?>" alt="" class="img-fluid d-md-block rounded mb-2 shadow">
     </div>
     <div class="card-body">
         <div id="id<?= $product['id'] ?? '' ?>" class="d-none"><?= $product['id'] ?? '' ?></div>
