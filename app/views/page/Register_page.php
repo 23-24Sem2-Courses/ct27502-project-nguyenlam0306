@@ -3,10 +3,10 @@
     padding: 0 20px 0 20px;
     position: relative;
     /* Độ mờ của background image */
-   
-}
 
-.background-image {
+  }
+
+  .background-image {
     background-image: url("/img/Register/Register.svg");
     position: absolute;
     top: 0;
@@ -15,7 +15,7 @@
     height: 100%;
     z-index: -1;
     opacity: 0.4;
-}
+  }
 
 
 
@@ -28,7 +28,7 @@
 
   .l-row {
     width: 900px;
-    height: 550px;
+    height: 700px;
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
@@ -107,7 +107,7 @@
     left: 10px;
     pointer-events: none;
     transition: .5s;
-    
+
   }
 
   .input-field .input:focus,
@@ -133,16 +133,17 @@
     color: #ffffff;
   }
 
-  span a {
+  .form-warning {
     text-decoration: none;
-    font-weight: 700;
-    color: black;
+    font-weight: 200;
+    color: red;
     transition: .5s;
   }
 
-  span a:hover {
+  .form-warning :hover {
     text-decoration: underline;
-    color: black;
+    color: red;
+    font-weight: 400
   }
 
   @media only screen and (max-width:768px) {
@@ -162,62 +163,62 @@
       top: 70%;
       text-align: center;
     }
-   
+
   }
-  
 </style>
 <div class="wrapper">
   <div class="background-image"></div>
   <div class="container main">
     <div class="row l-row center">
       <!-- hinh anh -->
-     
+
 
       <div class="col-md-6 right">
         <form action="/Register" method="POST" class="input-box">
           <h1>Đăng ký</h1>
           <div class="mb-3 input-field">
             <label for="username">Tên đăng nhập</label>
+            <span class="form-warning">
+              <?= (isset($data['errors']['username'])) ? $data['errors']['username'] : '' ?>
+            </span>
             <input type="text" class="input" id="username" name="username" value="" required />
-                    <span class="form-warning">
-                        <?= (isset($data['errors']['username'])) ? $data['errors']['username'] : '' ?>
-                    </span>
+
           </div>
-          <div class="mb-3 input-field">
-          <label for="fullname" class="">Họ Tên</label>
-                    <input type="text" class="input" id="fullname" name="fullname" value="" required />
-                    <span class="form-warning">
-                        <?= (isset($data['errors']['fullname'])) ? $data['errors']['fullname'] : '' ?>
-                    </span>
+          <div class="mb-4 input-field">
+            <label for="fullname" class="">Họ Tên</label>
+            <span class="form-warning">
+              <?= (isset($data['errors']['fullname'])) ? $data['errors']['fullname'] : '' ?>
+            </span>
+            <input type="text" class="input" id="fullname" name="fullname" value="" required />
+
           </div>
-          <div class=" mb-3 input-field">
-                    <label for="phone" class="">Số điện thoại</label>
-                    <input type="tel" class="input" id="phonen" name="phone" value="" required />
-                    <span class="form-warning">
-                        <?= (isset($data['errors']['phone'])) ? $data['errors']['phone'] : '' ?>
-                    </span>
-                </div>
-          <div class="mb-3 input-field">
-          <label for="password" class="">Mật khẩu</label>
-                    <input type="password" class="input" id="password" name="password" value="" required />
-                    <span class="form-warning">
-                        <?= (isset($data['errors']['password'])) ? $data['errors']['password'] : '' ?>
-                    </span>
+          <div class=" mb-4 input-field">
+            <label for="phone" class="">Số điện thoại</label>
+            <span class="form-warning">
+              <?= (isset($data['errors']['phone'])) ? $data['errors']['phone'] : '' ?>
+            </span>
+            <input type="tel" class="input" id="phonen" name="phone" value="" required />
+
           </div>
-          <div class=" mb-3 input-field">
-                    <label for="password_confirmation" class="">Nhập lại Mật khẩu</label>
-                    <input type="password" class="input" id="password_confirmation" name="password_confirmation" value="" required />
-                    <span class="form-warning">
-                        <?= (isset($data['errors']['password_confirmation'])) ? $data['errors']['password_confirmation'] : '' ?>
-                    </span>
-                </div>
-          <div class="mb-3 input-field">
+          <div class="mb-4 input-field">
+            <label for="password" class="">Mật khẩu</label>
+            <span class="form-warning">
+              <?= (isset($data['errors']['password'])) ? $data['errors']['password'] : '' ?>
+            </span>
+            <input type="password" class="input" id="password" name="password" value="" required />
+          </div>
+          <div class="mb-4 input-field">
+            <label for="password_confirmation" class="">Nhập lại Mật khẩu</label>
+            <span class="form-warning">
+              <?= (isset($data['errors']['password_confirmation'])) ? $data['errors']['password_confirmation'] : '' ?>
+            </span>
+            <input type="password" class="input" id="password_confirmation" name="password_confirmation" value="" required />
+
+          </div>
+          <div class="mb-4 input-field">
             <span>Bạn đã có tài khoản? <a href="/Login">Đăng nhập ngay</a></span>
           </div>
           <button type="submit" class="submit">Đăng ký</button>
-          <span>
-            <?= (isset($data['authenticate']) && $data['authenticate'] === false) ? '<p id="warning">Tên đăng nhập hoặc mật khẩu không chính xác</p>' : '' ?>
-          </span>
       </div>
       </form>
       <div class="col-md-6 side-image">
