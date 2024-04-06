@@ -64,7 +64,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy xem</button>
-        <button type="button" class="btn btn-warning" data-bs-dismiss="modal" onclick="addToCart()">Đặt hàng</button>
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal" onclick="addToCart()">Thêm vào giỏ</button>
       </div>
     </div>
   </div>

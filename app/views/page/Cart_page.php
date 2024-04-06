@@ -9,6 +9,18 @@
         background-color: antiquewhite;
         color: brown;
     }
+
+    .btn-pink {
+        background-color: pink;
+        color: white;
+        transition: background-color 0.3s;
+
+    }
+
+    .btn-pink:hover {
+        background-color: hotpink;
+        color: white;
+    }
 </style>
 <div class="container pt-3">
     <div class="h3 text-center">GIỎ CỦA BẠN</div>
@@ -17,8 +29,8 @@
             <table class="table  table-striped table-hover pt-3 m-2 " id="cartTable">
                 <thead>
                     <tr>
-                        <th scope="col" style="width: 55%;">Trang phục</th>
-                        <th scope="col" style="width: 5%;">Màu</th>
+                        <th scope="col" style="width: 52%;">Trang phục</th>
+                        <th scope="col" style="width: 8%;">Màu</th>
                         <th scope="col" style="width: 5%;">Size</th>
                         <th scope="col" style="width: 10%;">Giá</th>
                         <th scope="col" style="width: 20%;">Số lượng</th>
@@ -37,11 +49,12 @@
                 </div>
             </div>
             <div class="col-9">
-                <h5 id="total text-end"></h5>
+                <h5 id="total" class="text-end"></h5>
             </div>
 
             <div class="col-sm-12 col-lg-12">
                 <form action="/Cart/Order" id="formOrder">
+                        <input type="text" name="cart" class="d-none" id="cartInfor">
                     <div class="text-end"> <button type="" class="btn btn-danger p-1">Đặt hàng</button></div>
                 </form>
             </div>
@@ -52,25 +65,8 @@
     function render() {
         $('#cartTableBody').text('');
         let cart = JSON.parse(localStorage.getItem('isCart'));
-        cart.array.forEach(element => {
-            let pattern = `<tr>
-            
-        
-            
-            </tr>`;
-            $('#cartTableBody').append(pattern);
-        });
-        total();
-    }
-    $(document).ready(() => {
-        render()
-    })
-    window.onstorage = () => {
-        render()
-    }
-</script>
-<!-- Nháp để điền vào pattern  -->
-<tr id="${element.id}">
+        cart.forEach(element => {
+            let pattern = `<tr id="${element.id}">
     <td data-th="Product">
         <div class="row">
             <div class="col-md-5">
@@ -92,9 +88,76 @@
         ${element.price}
     </td>
     <td data-th="Quantity">
-        <button class="btn btn-light">-</button>
-        <span>${element.quantity}</span>
-        <button class="btn btn-light">+</button>
-        ${element}
+        <button class="btn btn-light" onclick="down('${element.id}')">-</button>
+        <span class="m-3" id="quantity${element.id}" >${element.quantity}</span>
+        <button class="btn btn-light" onclick="up('${element.id}')">+</button>        
     </td>
-</tr>
+    <td>
+        <button class="btn  btn-pink" onclick="remove('${element.id}')">
+        <i class="fas fa-trash"></i>
+    </button>
+    </td>
+</tr>`;
+            $('#cartTableBody').append(pattern);
+        });
+        total();
+    }
+    $(document).ready(() => {
+        render()
+    })
+    window.onstorage = () => {
+        render()
+    }
+
+    function up(id) {
+        const quantityInput = $(`#quantity${id}`);
+        let quantity = parseInt(quantityInput.text());
+        quantityInput.text(quantity + 1);
+        let cart = JSON.parse(localStorage.getItem('isCart'));
+        cart.forEach(element => {
+            if (element.id === id) {
+                element.quantity = quantityInput.text()
+            }
+        })
+        localStorage.setItem('isCart', JSON.stringify(cart));
+        total();
+    }
+
+    function down(id) {
+        const quantityInput = $(`#quantity${id}`);
+        let quantity = parseInt(quantityInput.text());
+        if (quantity > 1) {
+            quantityInput.text(quantity - 1);
+        }
+        let cart = JSON.parse(localStorage.getItem('isCart'))
+        cart.forEach(element => {
+            if (element.id === id) {
+                element.quantity = quantityInput.text()
+            }
+        })
+        localStorage.setItem('isCart', JSON.stringify(cart));
+        total();
+    }
+
+    function total() {
+        let total = 0;
+        let cart = JSON.parse(localStorage.getItem('isCart'));
+        cart.forEach(element => {
+            total += parseFloat(element.price) * parseInt(element.quantity);
+        })
+        $('#total').text(total.toFixed(3) + ' $');
+
+    }
+
+    function remove(items) {
+        $(`#${items}`).remove()
+        let cart = JSON.parse(localStorage.getItem('isCart'));
+        cart = cart.filter((element) => {
+            return element.id !== items
+        })
+        localStorage.setItem('isCart', JSON.stringify(cart));
+        total();
+    }
+
+</script>
+<!-- Nháp để điền vào pattern  -->
