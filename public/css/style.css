@@ -57,9 +57,9 @@ footer {
 }
 
 footer .top-footer {
-    background-color: #FFF6D1;
+    background-color: #FFF6D1 !important;
     font-size: 0.9em;
-    padding-top: 8px;
+    padding-top: 0px;
     color: black;
     min-height: 100px;
 }
