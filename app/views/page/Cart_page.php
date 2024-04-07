@@ -54,7 +54,8 @@
 
             <div class="col-sm-12 col-lg-12">
                 <form action="/Cart/Order" id="formOrder">
-                        <input type="text" name="cart" class="d-none" id="cartInfor">
+                    <input type="text" name="cart" class="d-none" id="cartInfor">
+
                     <div class="text-end"> <button type="" class="btn btn-danger p-1">Đặt hàng</button></div>
                 </form>
             </div>
@@ -158,6 +159,14 @@
         localStorage.setItem('isCart', JSON.stringify(cart));
         total();
     }
+    document.querySelector('#formOrder').addEventListener('submit', (event) => {
+        event.preventDefault();
+        let cart = localStorage.getItem('isCart');
+        $('#cartInfor').val(cart);
+        if (cart && cart != "[]" && cart !== "") {
+            event.target.submit();
+        }
 
+    })
 </script>
 <!-- Nháp để điền vào pattern  -->

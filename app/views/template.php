@@ -32,7 +32,7 @@
                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-2">
+                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                             <li class="nav-item">
                                 <a class="nav-link <?= $data['page'] == 'Home' ? 'active' : '' ?>" aria-current="page" href="/Home">Trang chủ</a>
                             </li>
@@ -52,9 +52,14 @@
                             </a>
                             <?php
                             if (isset($_SESSION['islogin'])) {
-                                include '../app/views/partitions/islogin.php';
-                            } else {
+                                include '../app/views/partitions/islogin.php';                                 
+                               
+                            }  else {
                                 include '../app/views/partitions/islogout.php';
+                            }
+                            if (isset($_SESSION['isadmin']) && $_SESSION['isadmin']) {
+                                // Bao gồm nội dung của file isadmin.php
+                                include '../app/views/partitions/isadmin.php';
                             }
                             ?>
 

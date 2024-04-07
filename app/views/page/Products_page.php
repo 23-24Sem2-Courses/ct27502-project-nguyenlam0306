@@ -101,31 +101,31 @@
   }
 
   function addToCart() {
-    let isCart = [];
+
     let product = {
       img: $('#imgProductModal').attr('src'),
       id: $('#idProductModal').text(),
       name: $('#nameProductModal').text(),
       price: $('#priceProductModal').text(),
-      color:$('#colorProductModal').text(),
-      size:$('#sizeProductModal').text(),
+      color: $('#colorProductModal').text(),
+      size: $('#sizeProductModal').text(),
       quantity: parseInt($('#quantity').text())
+    };
+
+
+    let isCart = localStorage.getItem('isCart') ? JSON.parse(localStorage.getItem('isCart')) : [];
+
+
+    let isProductExist = isCart.find(item => item.id === product.id);
+
+
+    if (isProductExist) {
+      isProductExist.quantity += product.quantity;
+    } else {
+      isCart.push(product);
     }
-    if (localStorage.getItem('isCart') !== null) {
-            isCart = JSON.parse(localStorage.getItem('isCart'))
-        } else 
-        {
-          isCart=[];
-        }
-        let flag=0;
-        isCart.forEach(e => {if (e.id === product.id) {
-          e.quantity+=product.quantity;
-          flag=1;
-        } })
-        if (flag===0) {
-          isCart.push(product);
-        }
-        isCart = JSON.stringify(isCart)
-        localStorage.setItem('isCart', isCart)
+
+
+    localStorage.setItem('isCart', JSON.stringify(isCart));
   }
 </script>
