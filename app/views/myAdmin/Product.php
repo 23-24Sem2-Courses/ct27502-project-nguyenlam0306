@@ -20,7 +20,7 @@ $products = $product->getAllProducts();
     <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade" id="pills-addProduct" role="tabpanel" aria-labelledby="pills-addProduct-tab" tabindex="0">
             <div class="container">
-                <form action="Admin/fillFromForm" method="POST" class="form" enctype="multipart/form-data">
+                <form action="/Admin/fillFromForm" method="POST" class="form" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label class="form-label " for="name">Tên sản phẩm</label>
                         <input class="text-input form-control" id="name" name="name" required type="text" placeholder='Áo dài tứ thân'>
@@ -43,10 +43,11 @@ $products = $product->getAllProducts();
                         <input type="text" class="form-control" name="color" id="color">
                         <label for="price">Giá</label>
                         <input type="text" class="form-control" name="price" id="price">
-                        <label for="image_path">Hình ảnh</label>
+                        <label for="image">Hình ảnh</label>
                         <div class="">
-                            <input type="file" class="" name="image_path" id="image" onchange="previewImage()">
-                            <img id="previewImage" src="#" alt="Image" width="100px">
+                            <input type="file" class="" name="image" id="image" onchange="previewImage()">                            
+                            <img id="previewImage" width="130px" src="#" alt="image">
+                            
                         </div>
                         <button class="btn btn-success text-center mt-4" type="submit">Thêm</button>
                     </div>
@@ -68,7 +69,7 @@ $products = $product->getAllProducts();
                                     <?php echo count($products); ?>
                                 </i> sản phẩm trong cửa hàng của bạn
                             </p>
-                            <table id="shoppingCart" class="table table-condensed table-responsive">
+                            <table id="shoppingCart" class="table table-hover table-responsive">
                                 <thead>
                                     <tr>
                                         <th style="width:60%">Sản phẩm</th>
@@ -99,10 +100,10 @@ $products = $product->getAllProducts();
                                         echo '</td>';
                                         echo '<td class="actions" data-th="">';
                                         echo '<div class="text-right">';
-                                        echo '<button class="btn btn-white border-secondary bg-white btn-md mb-2" onclick="edit(' . $item->getId() . ')">';
-                                        echo ' <i class="fas fa-sync"></i>';
+                                        echo '<button class="btn btn-light bg-primary btn-md mb-2" onclick="edit(' . $item->getId() . ')">';
+                                        echo ' <i class="fa-solid fa-pen"></i>';
                                         echo '</button>';
-                                        echo '<button class="btn btn-white border-secondary bg-white btn-md mb-2" onclick="deleteProduct(' . $item->getId() . ')">';
+                                        echo '<button class="btn btn-light bg-danger mb-2" onclick="deleteProduct(' . $item->getId() . ')">';
                                         echo ' <i class="fas fa-trash"></i>';
                                         echo '</button>';
                                         echo '</div>';
@@ -138,9 +139,11 @@ $products = $product->getAllProducts();
         var preview = document.querySelector('#previewImage');
         var file = document.querySelector('#image').files[0];
         var reader = new FileReader();
+        
         reader.onloadend = function () {
             preview.src = reader.result;
         }
+        
         if (file) {
             reader.readAsDataURL(file);
         } else {

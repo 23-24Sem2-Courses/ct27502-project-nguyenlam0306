@@ -1,3 +1,6 @@
+<?php
+@include '../app/views/myAdmin/checkAdmin.php';
+?>
 <!doctype html>
 <html lang="en">
 

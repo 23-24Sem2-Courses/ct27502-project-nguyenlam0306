@@ -97,6 +97,7 @@
 
   function totalProduct() {
     moneyNumber = parseFloat($('#priceProductModal').text()) * parseInt($('#quantity').text());
+    // moneyNumber=moneyNumber.tofixed(2);
     $('#totalProduct').text(moneyNumber);
   }
 
