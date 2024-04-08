@@ -162,5 +162,11 @@ class Products
         header("location" . "/Admin/Manage/Product");
         
     }
+    public function deleteProduct($id)
+    {
+        $stmt = $this->pdo->prepare("DELETE FROM {$this->tableName} WHERE id=:id");
+        $stmt->bindParam(':id', $id);
+        return $stmt->execute();
+    }
 
 }
