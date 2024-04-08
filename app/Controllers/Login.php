@@ -9,9 +9,9 @@ class Login extends \App\Core\Controller
         if (isset($_SESSION['islogin'])) {
             \App\Core\Router::redirect('/Home');
             exit;
-        }
+        }        
     }
-    // kiểm tra đăng nhập chưa
+   
     function Show()
     {
         $this->checkAuthor();
@@ -42,8 +42,10 @@ class Login extends \App\Core\Controller
                     $_SESSION['user_id'] = $user->getID();
                     $_SESSION['user_fullname'] = $user->getFullName();
                     if ($value['username'] === 'admin') {
-                        echo '<script>alert("Đã vào admin thành công");setTimeout(function(){window.location.href="/Admin/Manage/Show";}, 980);</script>';
+                        $_SESSION['isadmin'] = 1;
+                        echo '<script>alert("Đã vào admin thành công");setTimeout(function(){window.location.href="/Admin/Manage/Home";}, 980);</script>';
                     } else {
+                        $_SESSION['isadmin'] = false;
                         echo '<script>alert("Đăng nhập thành công");setTimeout(function(){window.location.href="/Home";}, 980);</script>';
                     }
                 } else {

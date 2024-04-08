@@ -73,7 +73,7 @@ class Products
     }
     public function getSize()
     {
-        return $this->price;
+        return $this->size;
     }
     public function setSize($size): self
     {

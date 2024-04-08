@@ -11,14 +11,16 @@ private $product;
 private $order;
 
 function Show() {
-    $this->view('dashboard',[]);
+    $this->view('dashboard',['page' => 'Home']);
 }
 
 function Manage($page){
-    $this->view('dashboard',['page'=> $page]);
+    $this->view('dashboard',[ 'page' => $page]);
 }
 
-
+function fillFromForm() {
+    
+}
 
 }
 
