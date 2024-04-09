@@ -57,7 +57,7 @@
                     <input type="text" name="cart" class="d-none" id="cartInfor">
                     <label for="address"><h5>Thêm địa chỉ:</h5></label>
                     <input type="text" name="address" id="address" class="form-control" required>
-                    <div class="text-end"> <button type="submit" class="btn btn-danger mt-3">Đặt hàng</button></div>
+                    <div class="text-end"> <button class="btn btn-danger mt-3 mb-2">Đặt hàng</button></div>
                 </form>
             </div>
         </div>
@@ -163,11 +163,10 @@
     document.querySelector('#formOrder').addEventListener('submit', (event) => {
         event.preventDefault();
         let cart = localStorage.getItem('isCart');
-        $('#cartInfor').val(cart);
+        $('#cartInfor').attr('value',cart);
         if (cart && cart != "[]" && cart !== "") {
             event.target.submit();
         }
 
     })
 </script>
-<!-- Nháp để điền vào pattern  -->

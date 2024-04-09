@@ -53,15 +53,16 @@ main {
 /* Footer  */
 
 footer {
-    padding: 0;
+    padding: 8px;
+    margin: 0;
 }
 
 footer .top-footer {
     background-color: #FFF6D1 !important;
     font-size: 0.9em;
-    padding-top: 0px;
+    padding-top: 8px;
     color: black;
-    min-height: 100px;
+    min-height: 130px;
 }
 
 footer .top-footer a {

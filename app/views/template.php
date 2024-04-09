@@ -78,8 +78,8 @@
         ?>
 
     </main>
-    <footer class="mt-3">
-        <div class="top-footer">
+    <footer class="">
+        <div class="top-footer pt-3">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">

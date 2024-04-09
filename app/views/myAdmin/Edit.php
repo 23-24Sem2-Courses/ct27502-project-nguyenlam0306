@@ -14,7 +14,7 @@
             </select>
             <label for="description" class="mt-2">Mô tả</label>
             <div class="">
-                <textarea class="textarea" cols="140" id="description" name="description" rows="5" ><?php if(isset($data['description'])) {echo $data['description'];}?></textarea>
+                <textarea class="textarea form-control" cols="149" id="description" name="description" rows="5" ><?php if(isset($data['description'])) {echo $data['description'];}?></textarea>
             </div>
             <label for="size">Size</label>
             <input type="text" class="form-control" name="size" id="size" value="<?php echo $data['size']?>">

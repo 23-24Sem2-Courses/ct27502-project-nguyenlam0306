@@ -133,8 +133,8 @@ class Order
         $sql = "INSERT INTO orders(customer_id, address) VALUES (:customer_id, :address)";
         $stmt = $this->pdo->prepare($sql);      
         $stmt->execute([
-            'customer_id', $this->customer_id,
-            'address', $this->address
+            'customer_id' => $this->customer_id,
+            'address'=> $this->address
         ]);
         $this->order_id = $this->pdo->lastInsertId();
         return $this;

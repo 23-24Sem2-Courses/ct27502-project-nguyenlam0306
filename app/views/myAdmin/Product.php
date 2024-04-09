@@ -35,7 +35,7 @@ $products = $product->getAllProducts();
                         </select>
                         <label for="description" class="mt-2">Mô tả</label>
                         <div class="">
-                            <textarea class="textarea" cols="140" id="description" name="description" rows="5"></textarea>
+                            <textarea class="textarea form-control" cols="140" id="description" name="description" rows="5"></textarea>
                         </div>
                         <label for="size">Size</label>
                         <input type="text" class="form-control" name="size" id="size">
