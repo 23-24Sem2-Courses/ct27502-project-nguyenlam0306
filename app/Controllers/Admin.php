@@ -40,7 +40,7 @@ class Admin extends \App\Core\Controller
             move_uploaded_file($_FILES["image"]["tmp_name"], $dir_Image . $new_filename);
             $image_path = '/img/uploads/' . $new_filename;
             $this->addProduct($name, $type, $price, $size, $color, $image_path, $description);
-            header('Location: ' . '/Admin/Manage/Product');
+            echo '<script>alert("Thêm sản phẩm thành công");setTimeout(function(){window.location.href="/Admin/Manage/Product";}, 1000);</script>';
         }
     }
     function addProduct($name, $type, $price, $size, $color, $image_path, $description)
@@ -66,5 +66,36 @@ class Admin extends \App\Core\Controller
             'desscription' => $this->product->getProductById($id)->getDes(),
             'price' => $this->product->getProductById($id)->getPrice()
         ]);
+    }
+    function editFromForm($id)
+    {
+        if (isset($_POST['name']) && isset($_POST['type']) && isset($_POST['description']) && isset($_POST['size']) && isset($_POST['color']) && isset($_POST['price']) && isset($_FILES['image'])) {
+            $name = $_POST['name'];
+            $type = $_POST['type'];
+            $description = $_POST['description'];
+            $size = $_POST['size'];
+            $color = $_POST['color'];
+            $price = $_POST['price'];
+            $dir_Image = '../public/img/uploads/';
+            $filename_with_ext = $_FILES["image"]["name"];
+            $filename_without_ext = pathinfo($filename_with_ext, PATHINFO_FILENAME);
+            $file_extension = pathinfo($filename_with_ext, PATHINFO_EXTENSION);
+            $new_filename = $filename_without_ext . '_' . date("Y-m-d_H-i-s") . '.' . $file_extension;
+            move_uploaded_file($_FILES["image"]["tmp_name"], $dir_Image . $new_filename);
+            $image_path = '/img/uploads/' . $new_filename;
+            $this->editProduct($id, $name, $type, $price, $size, $color, $image_path, $description);
+            echo '<script>alert("Sửa sản phẩm thành công");setTimeout(function(){window.location.href="/Admin/Manage/Product";}, 1000);</script>';
+        }
+    }
+    function editProduct($id, $name, $type, $price, $size, $color, $image_path, $description)
+    {
+        $this->product = new Products();
+        $this->product->updateProduct($id, $name, $type, $size, $color, $description, $price, $image_path);
+        echo (1);
+    }
+    function changeOrderStatus($order_id, $status)
+    {
+        $this->order = new Order();
+        $this->order->changeStatus($order_id, $status);
     }
 }

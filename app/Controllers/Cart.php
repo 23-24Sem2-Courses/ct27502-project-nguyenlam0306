@@ -15,7 +15,25 @@ class Cart extends \App\Core\Controller
          exit();
       }
       if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-         $cart= json_decode($_POST['cart'], true);
+         $cart = json_decode($_POST['cart'], true);
+         $order = $this->model('Order');
+         $order->fill([
+            ['customer_id' => $_SESSION['user_id'],
+            'address' => $_POST['address']
+            ]
+         ]);
+         $order->save();
+         foreach($cart as $item) {
+           $order_items = $this->model('Order_Items');
+           $order_items->fill( [
+            'order_id' => $order->getOrderInfor()['order_id'],
+            'product_id' => $item['product_id'],
+            'quantity' => $item['quantity']
+           ]);
       }
+      $order_items->save();
+      echo '<script>localStorage.removeItem("cart");</script>';
+      echo '<script>alert("Đặt hàng thành công, vui lòng kiểm tra lại trong đơn nhé!");setTimeout(function(){window.location.href="/Cart";}, 900);</script>';
    }
+}
 }
