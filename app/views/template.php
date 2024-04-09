@@ -40,15 +40,15 @@
                                 <a class="nav-link <?= $data['page'] == 'Intro' ? 'active' : '' ?>" href="/Intro">Về chúng tôi</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link <?= $data['page'] == 'Products' ? 'active' : '' ?>" href="/Products">Thuê đồ</a>
+                                <a class="nav-link <?= $data['page'] == 'Products' ? 'active' : '' ?>" href="/Products">Trang phục</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link <?= $data['page'] == 'Feedback' ? 'active' : '' ?>" href="/Feedback">Liên hệ</a>
+                                <a class="nav-link <?= $data['page'] == 'Feedback' ? 'active' : '' ?>" href="/Feedback">Feedback</a>
                             </li>
                         </ul>
                         <div class="">
-                            <a href="/Cart" class="btn mt-0 p-0 position-relative"><i style="color: #ffa6a6; font-size: 30px" class="fa-brands fa-opencart"></i>
+                            <a href="/Cart" class="btn mt-0 p-0 position-relative"><i style="color: #ff226f; font-size: 30px" class="fa-brands fa-opencart"></i>
                             </a>
                             <?php
                             if (isset($_SESSION['islogin'])) {

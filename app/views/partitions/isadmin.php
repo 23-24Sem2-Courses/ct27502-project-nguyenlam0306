@@ -1,1 +1,1 @@
-<a href="/Admin" class="btn btn-hover" style="background-color: #ffa6a6;"><i class="fa-solid fa-wrench" style="color: #ffffffff;"></i></a>
+<a href="/Admin" class="btn btn-hover" style="background-color: #ff226f;"><i class="fa-solid fa-wrench" style="color: #ffffffff;"></i></a>
