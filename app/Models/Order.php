@@ -70,4 +70,82 @@ class Order
         $this->items = $items;
         return $this;
     }
+    public function getAllOrder()
+    {
+        $orders = [];
+        $stmt = $this->pdo->prepare("SELECT * FROM orders");
+        $stmt->execute();
+
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $order = new Order();
+            $order->fillFromDB($row);
+            $orders[] = $order;
+        }
+        return $orders;
+    }
+    public function getOrderId()
+    {
+        return $this->order_id;
+    }
+    public function getCustomerName()
+    {
+        $sql_query = "SELECT users.fullname FROM 
+        orders inner join users on 
+        orders.customer_id = users.id 
+        where users.id = :customer_id";
+        $stmt = $this->pdo->prepare($sql_query);
+        $stmt->bindParam(':customer_id', $this->customer_id);
+        $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $customer_name = $row['fullname'];
+            return $customer_name;
+        }
+    }
+    public function getStatusString()
+    {
+        switch ($this->status) {
+            case 0:
+                return 'Đã xác nhận';
+            case 1:
+                return 'Đang giao';
+            case 2:
+                return 'Đã giao';
+            case 3:
+                return 'Đã hủy';
+        }
+    }
+    public function getStatus()
+    {
+        return $this->status;
+    }
+    public function changeStatus($order_id, $status)
+    {
+        $sql = "UPDATE orders SET orders.status = :status where orders.order_id= :order_id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(':status', $status);
+        $stmt->bindParam(':order_id', $order_id);
+        $stmt->execute();
+        echo '<script>alert("Đã cập nhật tình trạng");setTimeout(function(){window.location.href="/Admin/Manage/Order";}, 1000);</script>';
+    }
+    public function save()
+    {
+        $sql = "INSERT INTO orders(customer_id, address) VALUES (:customer_id, :address)";
+        $stmt = $this->pdo->prepare($sql);      
+        $stmt->execute([
+            'customer_id', $this->customer_id,
+            'address', $this->address
+        ]);
+        $this->order_id = $this->pdo->lastInsertId();
+        return $this;
+    }
+    public function getOrderInfor()
+    {
+        return [
+            'order_id' => $this->order_id,
+            'customer_id' => $this->customer_id,
+            'status' => $this->status,
+            'address' => $this->address
+        ];
+    }
 }

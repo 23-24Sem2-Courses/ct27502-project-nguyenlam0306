@@ -52,11 +52,12 @@
                 <h5 id="total" class="text-end"></h5>
             </div>
 
-            <div class="col-sm-12 col-lg-12">
-                <form action="/Cart/Order" id="formOrder">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <form action="/Cart/Order" id="formOrder" method="POST">
                     <input type="text" name="cart" class="d-none" id="cartInfor">
-
-                    <div class="text-end"> <button type="" class="btn btn-danger p-1">Đặt hàng</button></div>
+                    <label for="address"><h5>Thêm địa chỉ:</h5></label>
+                    <input type="text" name="address" id="address" class="form-control" required>
+                    <div class="text-end"> <button type="submit" class="btn btn-danger mt-3">Đặt hàng</button></div>
                 </form>
             </div>
         </div>
