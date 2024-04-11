@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/img/small_logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/logo/small_logo.png" type="image/x-icon">
     <!-- Thư viện  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -39,8 +39,18 @@
                             <li class="nav-item">
                                 <a class="nav-link <?= $data['page'] == 'Intro' ? 'active' : '' ?>" href="/Intro">Về chúng tôi</a>
                             </li>
+
                             <li class="nav-item">
-                                <a class="nav-link <?= $data['page'] == 'Products' ? 'active' : '' ?>" href="/Products">Trang phục</a>
+                                <a class="nav-link <?= $data['page'] == 'Products' ? 'active' : '' ?> " href="/Products">Trang phục</a>
+                                <!-- <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/Products">Áo dài truyền thống</a></li>
+                                    <li><a class="dropdown-item" href="/Products">Trang phục cosplay</a></li>
+                                    <li><a class="dropdown-item" href="/Products">Vest</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="/Products">Phụ kiện khác</a></li>
+                                </ul> -->
                             </li>
 
                             <li class="nav-item">
@@ -52,9 +62,8 @@
                             </a>
                             <?php
                             if (isset($_SESSION['islogin'])) {
-                                include '../app/views/partitions/islogin.php';                                 
-                               
-                            }  else {
+                                include '../app/views/partitions/islogin.php';
+                            } else {
                                 include '../app/views/partitions/islogout.php';
                             }
                             if (isset($_SESSION['isadmin']) && $_SESSION['isadmin']) {
@@ -109,7 +118,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    
+
     <script src="/js/script.js"></script>
 </body>
 
