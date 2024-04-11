@@ -14,7 +14,7 @@ $orderItems = new Order_Items();
         <div class="row w-100">
             <div class="col-lg-12 col-md-12 col-12">
                 <p class="mb-5 text-center">
-                    Có <i class="text-info font-weight-bold">
+                    Có <i class="text-danger font-weight-bold">
                         <?php echo count($orders); ?>
                     </i> đơn hàng cần được xử lý
                 </p>

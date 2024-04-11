@@ -17,8 +17,7 @@
 
 </head>
 
-<body>
-    <div id="top"></div>
+<body>   
     <header>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top navigation">
             <div class="container">

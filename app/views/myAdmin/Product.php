@@ -6,13 +6,13 @@ $product = new Products;
 $products = $product->getAllProducts();
 
 ?>
-<div class="container pt-2">
+<div class="container pt-5 justify-content-center d-flex">
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link " id="pills-addProduct-tab" data-bs-toggle="pill" data-bs-target="#pills-addProduct" type="button" role="tab" aria-controls="pills-addProduct" aria-selected="false">Thêm sản phẩm</button>
+            <button class="nav-link btn btn-info" id="pills-addProduct-tab" data-bs-toggle="pill" data-bs-target="#pills-addProduct" type="button" role="tab" aria-controls="pills-addProduct" aria-selected="false">Thêm sản phẩm</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-editProduct-tab" data-bs-toggle="pill" data-bs-target="#pills-editProduct" type="button" role="tab" aria-controls="pills-editProduct" aria-selected="false">Sửa sản phẩm</button>
+            <button class="nav-link btn btn-info" id="pills-editProduct-tab" data-bs-toggle="pill" data-bs-target="#pills-editProduct" type="button" role="tab" aria-controls="pills-editProduct" aria-selected="false">Sửa sản phẩm</button>
         </li>
 
     </ul>
@@ -72,10 +72,10 @@ $products = $product->getAllProducts();
                             <table id="shoppingCart" class="table table-hover table-responsive">
                                 <thead>
                                     <tr>
-                                        <th style="width:60%">Sản phẩm</th>
+                                        <th style="width:50%">Sản phẩm</th>
                                         <th style="width:12%">Giá</th>
                                         <th style="width:10%">Số lượng</th>
-                                        <th style="width:16%"></th>
+                                        <th style="width:28%"></th>
                                     </tr>
                                 </thead>
                                 <tbody>

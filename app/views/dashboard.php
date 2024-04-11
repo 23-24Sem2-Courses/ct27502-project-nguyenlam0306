@@ -20,36 +20,47 @@
 <body>
     <header>
         <!-- place navbar here -->
-        <div class="container-fluid">
 
-            <ul class="nav nav-pills nav-fill pt-2 bg-light">
-                <a href="/Home">
-                    <img src="/img/logo/long_logo.png" alt="Logo" width="150px" >
-                </a>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" id="home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="order">Đơn hàng</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="add-product">Sản phẩm</a>
-                </li>
-                <li class="nav-item" id="customer">
-                    <a class="nav-link" href="#">Khách hàng</a>
-                </li>
-                <li class="nav-item" id="logout">
-                    <a class="nav-link" href="/Logout">Đăng xuất</a>
-                </li>
-            </ul>
-
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-light navigation">
+            <div class="container">
+                <a class="navbar-brand" href="/Home"><img src="/img/logo/long_logo.png" alt="Logo" width="150px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/Admin/Manage/Home">Trang chủ</a></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="/Admin/Manage/Order">Đơn hàng</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="/Admin/Manage/Product">Quản lý đồ</a>
+                            </li>
+                            <li class="nav-item" id="customer">
+                                <a class="nav-link" href="/Admin/Manage/Customer">Khách hàng</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Logout">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- ---  -->        
     </header>
     <main>
-    <?php if (file_exists('../app/views/myAdmin/' . $data['page'] . '.php')) {
-                    include '../app/views/myAdmin/' . $data['page'] . '.php';
-                }
-                ?>
+        <?php if (file_exists('../app/views/myAdmin/' . $data['page'] . '.php')) {
+            include '../app/views/myAdmin/' . $data['page'] . '.php';
+        }
+        ?>
 
     </main>
     <footer>
@@ -60,23 +71,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-    <script type='text/javascript'>
-        let baseURL = location.host + '/Admin';
-        jQuery(document).ready(function ($) {
-            $("#home").click(function (event) {
-                location.href = '/Admin/Manage/Home';
-            });
-            $("#add-product").click(function (event) {
-                location.href = '/Admin/Manage/Product';
-            });
-            $("#order").click(function (event) {    
-                location.href = '/Admin/Manage/Order';
-            });
-            $("#customer").click(function (event) {
-                location.href = '/Admin/Manage/Customer';
-            });
-        });
-    </script>
+    
 </body>
 
 </html>

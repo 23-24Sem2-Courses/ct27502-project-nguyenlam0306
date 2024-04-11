@@ -18,8 +18,8 @@ class User extends \App\Core\Controller
         $this->checkAuthor();
         $user = $this->model('User');
         $user->findById($_SESSION['user_id']);
-        $this->view('user', [
-            'page' => 'Infor',
+        $this->view('template', [
+            'page' => 'UserInfor',
             'username' => $user->getUserName(),
             'fullname' => $user->getFullName(),
             'phone' => $user->getPhone(),
@@ -27,5 +27,8 @@ class User extends \App\Core\Controller
     }
     public function Order() {
         
+    }
+    public function Change() {
+
     }
 }
