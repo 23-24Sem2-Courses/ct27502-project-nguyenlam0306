@@ -4,13 +4,13 @@
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Thông tin</a>
+                    <i class="fa-solid fa-circle-info"></i>     <a class="nav-link active" href="#"> Thông tin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/User/Order">Đơn hàng</a>
+                    <i class="fa-solid fa-cart-shopping"></i>    <a class="nav-link" href="/User/Order">Đơn hàng</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="/User/Change">Thay đổi</a>
+                    <i class="fa-solid fa-pen-nib"></i>     <a class="nav-link " href="/User/Change">Thay đổi thông tin</a>
                     </li>
                 </ul>
             </div>

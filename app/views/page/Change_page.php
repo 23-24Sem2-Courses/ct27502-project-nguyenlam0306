@@ -4,7 +4,7 @@
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Thông tin cá nhân</a>
+                        <a class="nav-link active" href="#">Sửa thông tin</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/User/ChangePassword">Đổi mật khẩu</a>
@@ -15,13 +15,23 @@
                 </ul>
             </div>
             <div class="card-body">
-                <h3 class="card-title"> <span class="text-danger"><?= $data['fullname'] ?></span> </h3>
+                <h3 class="card-title"> <span class="text-danger"><?= $data['username'] ?></span> </h3>
                 <hr>
                 <div class="row container">
-                    <div class="col">
-                        <p class="card-text  "><b>Tên đăng nhập:</b>  <span><?= $data['username'] ?></span></p>
-                       
-                        <p class="card-text  "><b>Số điện thoại:</b> <?= $data['phone'] ?></p>
+                    <div class="">
+                        <form action="/User/Change" method="POST" >
+                           <div class="form-group mb-2">
+                           <label for="fullname"><i class="fa-solid fa-user"></i> Tên của bạn: </label>
+                            <input type="text" class="form-control" name="fullname" required value="<?= $data['fullname']?>">
+                            <span class="text-danger"><?= isset($data['errors']['fullname']) ? $data['errors']['fullname'] : '' ?></span>
+                           </div>
+                           <div class="form-group"><i class="fa-solid fa-phone"></i>  <label for="phone">Số điện thoại:</label>
+                            <input type="text" class="form-control" name="phone" value="<?= $data['phone']?>">
+                            <span class="text-danger"><?= isset($data['errors']['phone']) ? $data['errors']['phone'] : '' ?></span></div>                          
+                           <div class="form-group">
+                           <button class="btn btn-success mt-3">Sửa</button>
+                           </div>
+                        </form>
                     </div>
                    
                 </div>

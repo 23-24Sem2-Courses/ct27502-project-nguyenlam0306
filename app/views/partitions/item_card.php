@@ -36,7 +36,7 @@
     <div class="card-body">
         <div id="id<?= $product['id'] ?? '' ?>" class="d-none"><?= $product['id'] ?? '' ?></div>
         <h5 id="name<?= $product['id'] ?? '' ?>" class="d-none card-title text-center"><?= $product['name'] ?? '' ?></h5>
-        <h5 id="price<?= $product['id'] ?? '' ?>" class=" d-none text-center"><?= $product['price'] ?? '' ?> <b>$</b></h5>
+        <h5 id="price<?= $product['id'] ?? '' ?>" class=" d-none text-center"><?= $product['price'] ?? '' ?> VNĐ</h5>
         <h5 id="size<?= $product['id'] ?? '' ?>" class="d-none text-center"><?= $product['size'] ?? '' ?></h5>
         <h5 id="des<?= $product['id'] ?? '' ?>" class="d-none text-center"><?= $product['description'] ?? '' ?></h5>
         <h5 id="color<?= $product['id'] ?? '' ?>" class="d-none text-center"><?= $product['color'] ?? '' ?></h5>
