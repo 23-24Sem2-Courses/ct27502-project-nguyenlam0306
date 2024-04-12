@@ -8,6 +8,12 @@ $orders = $allOrders->getAllOrder();
 $orderItems = new Order_Items();
 
 ?>
+<style>
+    .check-btn{
+        background-color: #FF7C7C;
+        color: white !important;
+    }
+</style>
 
 <section class="pt-5 pb-5" id='show-order'>
     <div class="container">
@@ -45,7 +51,7 @@ $orderItems = new Order_Items();
                              <option  value="2">Đã giao</option>
                              <option  value="3">Đã hủy</option>
                              </select></form>
-                                <button class="btn btn-success m-2">Xem lại</button></div>                                
+                                <button class="btn check-btn m-2">Xem lại</button></div>                                
                                
                                 </td>';
                             echo '</tr>';

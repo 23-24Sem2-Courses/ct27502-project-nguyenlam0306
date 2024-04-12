@@ -5,3 +5,55 @@ main {
 html {
     box-sizing: border-box;
 }
+
+.navigation {
+    background-color: #0C0C0C!important;
+    padding: 5px 0;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #ececec;
+    margin-left: 30px;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #ff69b4;
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff69b4;
+    transition: width 0.3s ease;
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+.text-reset {
+    color: #ececec;
+}
+
+.offcanvas-body {
+    background-color: #0C0C0C;
+}
+
+.navbar-toggler-icon {
+    background-color: palevioletred;
+    color: aliceblue;
+    border-radius: 2px;
+}
+
+.navbar-toggler {
+    color: #ececec !important;
+}

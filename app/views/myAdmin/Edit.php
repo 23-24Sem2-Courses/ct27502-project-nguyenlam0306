@@ -24,8 +24,9 @@
             <input type="text" class="form-control" name="price" id="price" value="<?php echo $data['price']?>">
             <label for="image">Hình ảnh</label>
             <div class="">
-                <input type="file" class="" name="image" id="image" onchange="previewImage()">
-                <img id="previewImage" width="130px" src="#" alt="image">
+                <input type="file" class="" name="image" id="image">
+                <br>
+                <img id="previewImage" width="130px" src="#" alt="image" class="mt-2">
 
             </div>
             <button class="btn btn-success text-center mt-4" type="submit">Sửa</button>
@@ -35,19 +36,14 @@
 
 </div>
 <script>
-    function previewImage() {
-        var preview = document.querySelector('#previewImage');
-        var file = document.querySelector('#image').files[0];
-        var reader = new FileReader();
-
-        reader.onloadend = function() {
-            preview.src = reader.result;
-        }
-
-        if (file) {
-            reader.readAsDataURL(file);
-        } else {
-            preview.src = "";
-        }
-    }
+    $(document).ready(function() {
+        $('#image').on('change', function() {
+            // Lấy tệp 
+            var file = $(this)[0].files[0];
+            // Tạo đường dẫn
+            var imageURL = URL.createObjectURL(file);
+            // Hiển thị ảnh
+            $('#previewImage').attr('src', imageURL).show();
+        });
+    });
 </script>
