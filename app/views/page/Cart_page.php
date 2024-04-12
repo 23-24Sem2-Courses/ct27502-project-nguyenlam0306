@@ -147,7 +147,7 @@
         cart.forEach(element => {
             total += parseFloat(element.price) * parseInt(element.quantity);
         })
-        $('#total').text(total.toFixed(3) + ' $');
+        $('#total').text(total.toFixed(0) + ' VNĐ');
 
     }
 
