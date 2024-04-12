@@ -23,7 +23,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light navigation">
             <div class="container">
-                <a class="navbar-brand" href="/Home"><img src="/img/logo/long_logo.png" alt="Logo" width="150px"></a>
+                <a class="navbar-brand" href="/Home"><img src="/img/logo/dark_long_logo.svg" alt="Logo" width="150px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -35,7 +35,7 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/Admin/Manage/Home">Trang chủ</a></a>
+                                <a class="nav-link" aria-current="page" href="/Admin/Manage/Home">Trang chủ</a></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link " href="/Admin/Manage/Order">Đơn hàng</a>
@@ -46,10 +46,10 @@
                             <li class="nav-item" id="customer">
                                 <a class="nav-link" href="/Admin/Manage/Customer">Khách hàng</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Logout">Đăng xuất</a>
-                            </li>
                         </ul>
+                        <div class="">
+                        <a class="nav-link text-end pt-2" href="/Logout">Đăng xuất</a>
+                        </div>
                     </div>
                 </div>
             </div>

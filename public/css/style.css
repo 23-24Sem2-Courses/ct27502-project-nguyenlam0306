@@ -30,7 +30,7 @@ html {
     color: #ff69b4;
 }
 
-.nav-item a::after {
+.nav-item a:not(.dropdown-item)::after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -127,4 +127,17 @@ footer .bot-footer {
     font-weight: 500;
     line-height: 1rem;
     color: red;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    border: none !important;
+}
+
+.dropdown-item:hover {
+    background: none !important;
+}
+
+.dropdown-menu {
+    background-color: #FFF6D1;
 }
