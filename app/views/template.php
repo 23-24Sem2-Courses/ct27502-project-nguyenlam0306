@@ -41,9 +41,11 @@
                             <li class="nav-item dropdown">
                               <a class=" btn nav-link" data-bs-toggle="dropdown" aria-expanded="false">Trang phục </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="/Products">Áo dài</a></li>
+                                    <li><a class="dropdown-item" href="/Products">Đầm dạ hội</a></li>
+                                    <li><a class="dropdown-item" href="/Products">Vest</a></li>
+                                    <li><a class="dropdown-item" href="/Products">Cosplay</a></li>
+                                    <li><a class="dropdown-item" href="/Products">Quần tây</a></li>
                                 </ul>
                             </li>
                             <!-- <li class="nav-item">
