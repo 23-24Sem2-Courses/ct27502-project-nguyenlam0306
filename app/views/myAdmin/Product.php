@@ -41,7 +41,7 @@ $products = $product->getAllProducts();
                         <input type="text" class="form-control" name="size" id="size">
                         <label for="color">Màu</label>
                         <input type="text" class="form-control" name="color" id="color">
-                        <label for="price">Giá</label>
+                        <label for="price">Giá - VNĐ</label>
                         <input type="text" class="form-control" name="price" id="price">
                         <label for="image">Hình ảnh</label>
                         <div class="">
@@ -70,7 +70,7 @@ $products = $product->getAllProducts();
                                     <?php echo count($products); ?>
                                 </i> sản phẩm trong cửa hàng của bạn
                             </p>
-                            <table id="shoppingCart" class="table table-hover table-responsive">
+                            <table id="" class="table table-hover table-responsive">
                                 <thead>
                                     <tr>
                                         <th style="width:50%">Sản phẩm</th>

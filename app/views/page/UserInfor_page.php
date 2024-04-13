@@ -19,9 +19,9 @@
                 <hr>
                 <div class="row container">
                     <div class="col">
-                        <p class="card-text  "><b>Tên đăng nhập:</b>  <span><?= $data['username'] ?></span></p>
+                          <p class="card-text  "> <i class="fa-solid fa-user text-danger"></i><b> <span class="ml-2  text-danger">Tên đăng nhập:</b>  <span><?= $data['username'] ?></span></p>
                        
-                        <p class="card-text  "><b>Số điện thoại:</b> <?= $data['phone'] ?></p>
+                        <p class="card-text  "><i class="fa-solid fa-phone  text-danger"></i> <span class="ml-2  text-danger"><b> Số điện thoại:</b></span> <?= $data['phone'] ?></p>
                     </div>
                    
                 </div>

@@ -30,7 +30,7 @@ class User extends \App\Core\Controller
         $orders = $this->model('Order');
         $orders= $orders->getbyCustomerID($_SESSION['user_id']);
         foreach($orders as $order) {
-            $items = $this->model('Order_Items')->getOrderbyId($order->getOrderInfor()['order_id']);
+            $items = $this->model('Order_Items')->getbyOrderId($order->getOrderInfor()['order_id']);
             $order->setItems($items);
         }
         $this->view('template', [
