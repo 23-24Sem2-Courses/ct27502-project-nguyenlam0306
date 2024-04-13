@@ -39,13 +39,14 @@
                                 <a class="nav-link <?= $data['page'] == 'Intro' ? 'active' : '' ?>" href="/Intro">Về chúng tôi</a>
                             </li>
                             <li class="nav-item dropdown">
-                              <a class=" btn nav-link" data-bs-toggle="dropdown" aria-expanded="false">Trang phục </a>
+                                <a class=" btn nav-link" data-bs-toggle="dropdown" aria-expanded="false">Trang phục </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/Products">Áo dài</a></li>
-                                    <li><a class="dropdown-item" href="/Products">Đầm dạ hội</a></li>
-                                    <li><a class="dropdown-item" href="/Products">Vest</a></li>
-                                    <li><a class="dropdown-item" href="/Products">Cosplay</a></li>
-                                    <li><a class="dropdown-item" href="/Products">Quần tây</a></li>
+                                    <li><a class="dropdown-item" href="/Products">Tất cả sản phẩm</a></li>
+                                    <li><a class="dropdown-item" href="/Products/Aodai">Áo dài</a></li>
+                                    <li><a class="dropdown-item" href="/Products/Dress">Đầm dạ hội</a></li>
+                                    <li><a class="dropdown-item" href="/Products/Vest">Vest</a></li>
+                                    <li><a class="dropdown-item" href="/Products/Cosplay">Cosplay</a></li>
+                                    <li><a class="dropdown-item" href="/Products/Trousers">Quần tây</a></li>
                                 </ul>
                             </li>
                             <!-- <li class="nav-item">

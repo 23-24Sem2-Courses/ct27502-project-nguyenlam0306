@@ -30,10 +30,11 @@ class Cart extends \App\Core\Controller
             'product_id' => $item['id'],
             'quantity' => $item['quantity']
            ]);
+           $order_items->save();
       }
-      $order_items->save();
+    
       echo '<script>localStorage.removeItem("isCart");</script>';
-      echo '<script>alert("Đặt hàng thành công, vui lòng kiểm tra lại trong đơn nhé!");setTimeout(function(){window.location.href="/Cart";}, 900);</script>';
+      echo '<script>alert("Đặt hàng thành công, vui lòng kiểm tra lại trong đơn nhé!");setTimeout(function(){window.location.href="/User/Order";}, 900);</script>';
    }
 }
 }

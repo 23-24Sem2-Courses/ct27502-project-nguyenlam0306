@@ -70,6 +70,10 @@ class Order
         $this->items = $items;
         return $this;
     }
+    public function getItems()
+	{
+		return $this->items;
+	}
     public function getAllOrder()
     {
         $orders = [];
@@ -131,10 +135,10 @@ class Order
     public function save()
     {
         $sql = "INSERT INTO orders(customer_id, address) VALUES (:customer_id, :address)";
-        $stmt = $this->pdo->prepare($sql);      
+        $stmt = $this->pdo->prepare($sql);
         $stmt->execute([
             'customer_id' => $this->customer_id,
-            'address'=> $this->address
+            'address' => $this->address
         ]);
         $this->order_id = $this->pdo->lastInsertId();
         return $this;
@@ -148,4 +152,29 @@ class Order
             'address' => $this->address
         ];
     }
+    public function getbyCustomerID($customer_id)
+    {
+        $orders = [];
+        $stmt = $this->pdo->prepare("SELECT * from orders where customer_id = :customer_id");
+        $stmt->execute([
+            'customer_id' => $customer_id
+        ]);
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $order = new Order();
+            $order->fillFromDB($row);
+            $orders[] = $order;
+        }
+        return $orders;
+    }
+    public function getTotal()
+    {
+        $total = 0;
+        foreach ($this->items as $item) {
+            $product = new \App\Models\Products;
+            $product = $product->getProductById($item->getOrderItemsInfor()['product_id']);
+            $total +=$product->getProductInfor()['price']*$item->getOrderItemsInfor()['quantity'];
+        }
+        return $total;
+    }
+
 }

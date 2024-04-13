@@ -12,6 +12,11 @@ $orderItems = new Order_Items();
     .check-btn{
         background-color: #FF7C7C;
         color: white !important;
+        transition: 0.2s;
+    }
+    .check-btn:hover{
+        background-color: #ff7c7b;
+        color: white !important;
     }
 </style>
 
@@ -65,6 +70,8 @@ $orderItems = new Order_Items();
 
     </div>
 </section>
+
+
 <script>
     function handleChange(selectElement, orderId) {
         var status = selectElement.value;

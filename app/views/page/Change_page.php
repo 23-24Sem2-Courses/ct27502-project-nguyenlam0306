@@ -4,7 +4,7 @@
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Sửa thông tin</a>
+                        <a class="nav-link active" href="#">Thay đổi thông tin</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/User/ChangePassword">Đổi mật khẩu</a>
