@@ -112,8 +112,8 @@
     </section>
 </div>
 <div class="part1">
-    <h1 class="ti">WHO AM I?</h1>
-    <h1 class="ti">Let's meet DyLa Clothes's Co-Founder!!!</h1>
+    <h1 class="ti pt-4">WHO AM I?</h1>
+    <h1 class="ti p-4">Let's meet DyLa Clothes's Co-Founder!!!</h1>
     <div class="hinhanh container-fluid row m-0">
         <div class="col-lg-6 p-0">
             <img src="/img/aboutus/PL.jpg" alt="">
@@ -146,7 +146,11 @@
                 </p>
             </div>
         </div>
+       
     </div>
+    <h1 class="ti pt-4">----HÀNH TRÌNH KHỞI NGHIỆP----</h1>
+    <img src="/img/aboutus/time.svg" alt="">
+   
 </div>
 
 
@@ -163,7 +167,6 @@
         let value = window.scrollY;
         text.style.marginTop = value * 2.5 + 'px';
         leaf.style.top = value * -1.5 + 'px';
-        leaf.style.left = value * 1.5 + 'px';
         leaf.style.left = value * 1.5 + 'px';
         h1.style.top = value * 1 + 'px';
     })
