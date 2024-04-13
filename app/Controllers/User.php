@@ -27,8 +27,7 @@ class User extends \App\Core\Controller
     }
     public function Order()
     {
-        $orders = $this->model('Order');
-        $orders= $orders->getbyCustomerID($_SESSION['user_id']);
+        $orders = $this->model('Order')->getbyCustomerID($_SESSION['user_id']);
         foreach($orders as $order) {
             $items = $this->model('Order_Items')->getbyOrderId($order->getOrderInfor()['order_id']);
             $order->setItems($items);

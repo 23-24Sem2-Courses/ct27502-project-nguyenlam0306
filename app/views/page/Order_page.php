@@ -18,7 +18,7 @@
                 <h3 class="card-title"> <span class="text-warning">Thông tin đơn hàng</span> </h3>
                 <hr>
                 <div class="row container">
-                    <div class="accordion col">
+                    <div class="accordion">
                          <?php 
                          foreach($data['orders'] as $order){
                             include '../app/views/partitions/order_items_detail.php';

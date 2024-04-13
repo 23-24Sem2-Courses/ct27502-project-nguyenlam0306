@@ -168,5 +168,20 @@ class Products
         $stmt->bindParam(':id', $id);
         return $stmt->execute();
     }
-
+    public function getProductsByType($type)
+    {
+        $products = [];
+    
+        $stmt = $this->pdo->prepare("SELECT * FROM {$this->tableName} WHERE type = :type");
+        $stmt->bindParam(':type', $type);
+        $stmt->execute();
+    
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $product = new Products();
+            $product->fillFromDB($row);
+            $products[] = $product;
+        }
+    
+        return $products;
+    }
 }

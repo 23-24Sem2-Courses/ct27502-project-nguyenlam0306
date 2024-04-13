@@ -1,6 +1,6 @@
 <div class="accordion-item">
     <h2 class="accordion-header bg-light">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $order->getOrderInfor()['order_id'] ?>" aria-expanded="true" aria-controls="collapse<?= $order->getOrderInfor()['order_id'] ?>">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $order->getOrderInfor()['order_id'] ?>" aria-expanded="false" aria-controls="collapse<?= $order->getOrderInfor()['order_id'] ?>">
             <div class="row container">
                 <div class="col-lg-6"> Đơn hàng <code>#<?= $order->getOrderInfor()['order_id'] ?></code> </div>
                 <div class="col-lg-6">Trạng thái: <code><?= $order->getStatusString() ?></code> </div>
@@ -13,22 +13,21 @@
                 <table id="" class="table table-hover table-responsive">
                     <thead>
                         <tr>
-                            <th style="width:50%">Sản phẩm</th>
+                            <th style="width:78%">Sản phẩm</th>
                             <th style="width:12%">Giá</th>
-                            <th style="width:10%">Số lượng</th>
-                            <th style="width:28%"></th>
+                            <th style="width:10%">Số lượng</th>                            
                         </tr>
                     </thead>
                     <tbody>
                         <?php
                         foreach ($order->getItems() as $item) {
-                            $product = new \App\Models\Products;
-                            $product = $product->getProductById($item->getOrderItemsInfor()['product_id']);
+                            $product = (new \App\Models\Products())->getProductById($item->getOrderItemsInfor()['product_id']);
                             include '../app/views/partitions/product_detail.php';
                         }
                         ?>
                     </tbody>
                 </table>
+                <p><strong>Địa chỉ giao:</strong>   <?= $order->getOrderInfor()['address'] ?></p>
                 <h4 class="text-end">Tổng cộng: <strong> <?= $order->getTotal() ?></strong> VNĐ</h4>
             </table>
         </div>
