@@ -56,7 +56,7 @@ $orderItems = new Order_Items();
                              <option  value="2">Đã giao</option>
                              <option  value="3">Đã hủy</option>
                              </select></form>
-                                <button class="btn check-btn m-2">Xem lại</button></div>                                
+                                                              
                                
                                 </td>';
                             echo '</tr>';
