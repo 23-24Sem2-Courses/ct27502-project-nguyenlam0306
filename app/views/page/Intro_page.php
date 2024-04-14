@@ -129,7 +129,6 @@
                     </i>
                 </p>
             </div>
-
         </div>
         <div class="col-lg-6 p-0">
             <img src="/img/aboutus/TD.jpg" alt="">
@@ -146,7 +145,6 @@
                 </p>
             </div>
         </div>
-       
     </div>
     <h1 class="ti pt-4">----HÀNH TRÌNH KHỞI NGHIỆP----</h1>
     <img src="/img/aboutus/time.svg" alt="">
