@@ -84,7 +84,6 @@ class User
         }
         return $users;
     }
-
     public function save()
     {
         $result = false;
