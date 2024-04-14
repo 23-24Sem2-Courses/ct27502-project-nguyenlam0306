@@ -116,7 +116,7 @@
 <div class="container-fluid part3 m-0" style="background-color: #97E7E1;">
     <div class="row">
         <div class="col-md-4">
-            <img src="/img/logo-in/Aodai-d.svg" alt="" class="mov-image">
+           <a href="/Products/Aodai"> <img src="/img/logo-in/Aodai-d.svg" alt="" class="mov-image"></a>
         </div>
         <div class="col-md-8 d-flex align-items-center justify-content-center" style="">
             <h3><i class="fa-solid fa-quote-left"></i> <b>Áo dài</b> - biểu tượng văn hóa và phong cách của người phụ nữ Việt Nam. Chúng tôi mang đến những bộ sưu tập đa dạng, phản ánh vẻ đẹp truyền thống và hiện đại, phục vụ mọi nhu cầu của bạn.<i class="fa-solid fa-quote-right"></i></h3>
@@ -130,7 +130,7 @@
             <h3><i class="fa-solid fa-quote-left"></i><b> Đồ cosplay</b> - khám phá thế giới của nhân vật ưa thích. Chúng tôi cung cấp những bộ trang phục cosplay chất lượng cao, từ anime đến phim truyền hình, đáp ứng mọi nhu cầu sáng tạo của bạn.<i class="fa-solid fa-quote-right"></i></h3>
         </div>
         <div class="col-md-4 ">
-            <img src="/img/logo-in/Cosplay-d.svg" alt="" class="mov-image">
+           <a href="/Products/Cosplay"><img src="/img/logo-in/Cosplay-d.svg" alt="" class="mov-image"></a>
         </div>
 
     </div>
@@ -140,7 +140,7 @@
     <div class="row">
 
         <div class="col-md-4">
-            <img src="/img/logo-in/Dress-d.svg" alt="" class="mov-image">
+         <a href="/Products/Dress"><img src="/img/logo-in/Dress-d.svg" alt="" class="mov-image"></a>
         </div>
         <div class="col-md-8 d-flex align-items-center justify-content-center">
             <h3><i class="fa-solid fa-quote-left"></i><b> Đầm dạ hội</b> - lựa chọn hoàn hảo cho những dịp quan trọng. Chúng tôi mang đến những bộ sưu tập đầm dạ hội đa dạng, từ thanh lịch đến sang trọng, phục vụ cho mọi phong cách và xu hướng.<i class="fa-solid fa-quote-right"></i></h3>
@@ -155,7 +155,7 @@
             <h3><i class="fa-solid fa-quote-left"></i><b>Vest</b>- biểu tượng của phong cách lịch lãm và chuyên nghiệp. Chúng tôi cung cấp những bộ vest đa dạng, từ cổ điển đến hiện đại, phục vụ cho mọi dịp từ công việc đến sự kiện.<i class="fa-solid fa-quote-right"></i></h3>
         </div>
         <div class="col-md-4">
-            <img src="/img/logo-in/Vest-d.svg" alt="" class="mov-image">
+            <a href="/Products/Vest"><img src="/img/logo-in/Vest-d.svg" alt="" class="mov-image"></a>
         </div>
 
     </div>
@@ -164,7 +164,7 @@
 <div class="container-fluid part3 m-0" style="background-color:#F8FF95">
     <div class="row">
         <div class="col-md-4">
-            <img src="/img/logo-in/Quan-d.svg" alt="" class="mov-image">
+          <a href="/Products/Trousers">  <img src="/img/logo-in/Quan-d.svg" alt="" class="mov-image"></a>
         </div>
         <div class="col-md-8 d-flex align-items-center justify-content-center">
             <h3><i class="fa-solid fa-quote-left"></i> <b>Quần tây</b> - sự kết hợp hoàn hảo giữa phong cách và thoải mái. Chúng tôi mang đến những bộ quần tây đa dạng, từ cổ điển đến hiện đại, phục vụ cho mọi nhu cầu và phong cách của bạn.<i class="fa-solid fa-quote-right"></i></h3>
