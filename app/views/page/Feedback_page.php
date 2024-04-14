@@ -141,7 +141,7 @@
                         </div>
                         <div class="modal-body">
                             <form>
-                            <fieldset class="row mb-3">
+                                <fieldset class="row mb-3">
                                     <legend class="col-form-label col-sm-3 pt-0">Chế độ:</legend>
                                     <div class="col-sm-9">
                                         <div class="form-check">
@@ -151,21 +151,21 @@
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" checked >
+                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" checked>
                                             <label class="form-check-label" for="gridRadios2">
-                                               Công khai
+                                                Công khai
                                             </label>
                                         </div>
                                     </div>
                                 </fieldset>
                                 <div class="row mb-3">
-                                    <label for="name" class="col-sm-3 col-form-label" >Tên:</label>
+                                    <label for="name" class="col-sm-3 col-form-label">Tên:</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" id="name" placeholder="Nếu bạn chọn ẩn danh có thể bỏ qua trường này">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="topic" class="col-sm-3 col-form-label" >Nhận xét về:</label>
+                                    <label for="topic" class="col-sm-3 col-form-label">Nhận xét về:</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" id="topic" placeholder="Sản phẩm, dịch vụ, hỗ trợ,..." required>
                                     </div>
@@ -206,9 +206,7 @@
                     <span><i class="fa-solid fa-quote-left"></i></span>
                     <div class="card__details">
                         <p>
-
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In quam asperiores ad culpa ipsum consequuntur numquam ipsam sed officiis minus corporis necessitatibus impedit, magnam fuga consequatur! Alias odit nulla ducimus!
-                            <!-- <i class="fa-solid fa-quote-right"></i> -->
+                            Shop thuê quần áo này thật sự ấn tượng! Đa dạng mẫu mã, chất lượng tốt và dịch vụ chuyên nghiệp. Giá cả hợp lý, đảm bảo bạn sẽ luôn tự tin và phong cách mỗi khi mặc đồ từ đây. Chắc chắn sẽ quay lại lần nữa!
                         </p>
                         <h4>-Trang Đức</h4>
                     </div>
@@ -234,8 +232,7 @@
                     <div class="card__details">
                         <p>
 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In quam asperiores ad culpa ipsum consequuntur numquam ipsam sed officiis minus corporis necessitatibus impedit, magnam fuga consequatur! Alias odit nulla ducimus!
-                            <!-- <i class="fa-solid fa-quote-right"></i> -->
+                            Đây là nơi tuyệt vời để thuê quần áo - phong cách độc đáo, chất lượng cao và dịch vụ thân thiện.<!-- <i class="fa-solid fa-quote-right"></i> -->
                         </p>
                         <h4>-Bảo Bảo Trần</h4>
                     </div>
@@ -261,7 +258,7 @@
                     <div class="card__details">
                         <p>
 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In quam asperiores ad culpa ipsum consequuntur numquam ipsam sed officiis minus corporis necessitatibus impedit, magnam fuga consequatur! Alias odit nulla ducimus!
+                            Shop thuê quần áo này không chỉ đa dạng về mẫu mã mà còn rất chuyên nghiệp và tiện lợi, là địa chỉ lý tưởng cho những buổi tiệc hay sự kiện đặc biệt.
                             <!-- <i class="fa-solid fa-quote-right"></i> -->
                         </p>
                         <h4>-Chị 4 </h4>
@@ -288,8 +285,7 @@
                     <div class="card__details">
                         <p>
 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In quam asperiores ad culpa ipsum consequuntur numquam ipsam sed officiis minus corporis necessitatibus impedit, magnam fuga consequatur! Alias odit nulla ducimus!
-                            <!-- <i class="fa-solid fa-quote-right"></i> -->
+                            Đội ngũ nhân viên thân thiện và chuyên nghiệp cùng với sự đa dạng về sản phẩm đã tạo nên trải nghiệm thuê quần áo tuyệt vời tại cửa hàng này.<!-- <i class="fa-solid fa-quote-right"></i> -->
                         </p>
                         <h4>-Quân Lê</h4>
                     </div>
@@ -314,7 +310,7 @@
                     <div class="card__details">
                         <p>
 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In quam asperiores ad culpa ipsum consequuntur numquam ipsam sed officiis minus corporis necessitatibus impedit, magnam fuga consequatur! Alias odit nulla ducimus!
+                            Với sự phục vụ nhiệt tình, dịch vụ chuyên nghiệp và bộ sưu tập đa dạng từ những thiết kế mới nhất đến những phong cách truyền thống, shop thuê quần áo này là điểm đến lý tưởng cho bất kỳ dịp sự kiện nào, giúp bạn tỏa sáng và tự tin hơn trong mỗi bước đi.
                             <!-- <i class="fa-solid fa-quote-right"></i> -->
                         </p>
                         <h4>-Tỷ Tỷ đạp sóng rẽ gió</h4>
@@ -341,8 +337,7 @@
                     <div class="card__details">
                         <p>
 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In quam asperiores ad culpa ipsum consequuntur numquam ipsam sed officiis minus corporis necessitatibus impedit, magnam fuga consequatur! Alias odit nulla ducimus!
-                            <!-- <i class="fa-solid fa-quote-right"></i> -->
+                            Chất lượng sản phẩm đảm bảo và sự linh hoạt trong việc đáp ứng nhu cầu của khách hàng, shop thuê quần áo này là lựa chọn hàng đầu cho những ai muốn thể hiện phong cách cá nhân một cách độc đáo và ấn tượng.<!-- <i class="fa-solid fa-quote-right"></i> -->
                         </p>
                         <h4>-Anh Bắp</h4>
                     </div>
